@@ -1,32 +1,6 @@
 {
   "questions": [
     {
-      "id": "sample-nog-1", "section": "NOG", "source": "sample",
-      "text": "Hur gammal är Maria?\n\n(1) Maria är dubbelt så gammal som sin bror.\n(2) Marias bror är 12 år.",
-      "options": [
-        "(1) ensam är tillräcklig, men inte (2) ensam",
-        "(2) ensam är tillräcklig, men inte (1) ensam",
-        "(1) och (2) tillsammans är tillräckliga, men ingen av dem ensam",
-        "(1) ensam är tillräcklig, och (2) ensam är tillräcklig",
-        "informationen är otillräcklig även tillsammans"
-      ],
-      "correct": 2,
-      "explanation": "Ingen uppgift räcker ensam, men tillsammans: 2 × 12 = 24 år."
-    },
-    {
-      "id": "sample-nog-2", "section": "NOG", "source": "sample",
-      "text": "Vad kostar en biobiljett? (Alla biljetter kostar lika mycket.)\n\n(1) Tre biljetter kostar 360 kr.\n(2) Fyra biljetter kostar 240 kr mer än två biljetter.",
-      "options": [
-        "(1) ensam är tillräcklig, men inte (2) ensam",
-        "(2) ensam är tillräcklig, men inte (1) ensam",
-        "(1) och (2) tillsammans är tillräckliga, men ingen av dem ensam",
-        "(1) ensam är tillräcklig, och (2) ensam är tillräcklig",
-        "informationen är otillräcklig även tillsammans"
-      ],
-      "correct": 3,
-      "explanation": "(1): 360/3 = 120 kr — räcker ensam. (2): skillnaden 240 kr motsvarar två biljetter, alltså 120 kr styck — räcker också ensam. Båda är var för sig tillräckliga."
-    },
-    {
       "id": "sample-dtk-1", "section": "DTK", "source": "sample",
       "text": "Tabell: Antal sålda cyklar per kvartal\n\nQ1: 120 | Q2: 180 | Q3: 240 | Q4: 60\n\nHur stor andel av årets försäljning skedde under Q3?",
       "options": ["25 %", "30 %", "40 %", "45 %"], "correct": 2,

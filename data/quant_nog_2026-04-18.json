@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "id": "2026-04-18-p3-NOG-23", "section": "NOG", "source": "2026-04-18",
+      "text": "Jenny, Lina och Susanne spelar varsitt instrument i ett band. En av dem spelar elbas, en spelar gitarr och en spelar trummor. Vem spelar vilket instrument?\n\n(1) Det är Jenny eller Lina som spelar elbas. Susanne spelar inte trummor.\n(2) Det är Susanne eller Lina som spelar gitarr. Jenny spelar inte trummor.\n\nTillräcklig information för lösningen erhålls",
+      "options": ["i (1) men ej i (2)", "i (2) men ej i (1)", "i (1) tillsammans med (2)", "i (1) och (2) var för sig", "ej genom de båda påståendena"],
+      "correct": 2,
+      "explanation": "(1) ger att Susanne spelar gitarr men lämnar Jenny/Lina oavgjort. (2) ger att Jenny spelar elbas men lämnar Susanne/Lina oavgjort. Tillsammans: Susanne = gitarr, Jenny = elbas, Lina = trummor. Alltså (1) tillsammans med (2)."
+    },
+    {
+      "id": "2026-04-18-p3-NOG-24", "section": "NOG", "source": "2026-04-18",
+      "text": "Hur många klasskamrater har Vilgot?\n\n(1) Om Vilgot hade haft ytterligare tre klasskamrater, så skulle antalet elever i klassen vara jämnt delbart med 5.\n(2) Vilgot har ett udda antal klasskamrater.\n\nTillräcklig information för lösningen erhålls",
+      "options": ["i (1) men ej i (2)", "i (2) men ej i (1)", "i (1) tillsammans med (2)", "i (1) och (2) var för sig", "ej genom de båda påståendena"],
+      "correct": 4,
+      "explanation": "Med $k$ klasskamrater är klassen $k+1$. (1): $k+4$ delbart med 5, dvs $k=1,6,11,16,\\dots$ (2): $k$ udda. Tillsammans $k=1,11,21,\\dots$ — fortfarande flera möjliga. Alltså ej genom de båda påståendena."
+    },
+    {
+      "id": "2026-04-18-p3-NOG-25", "section": "NOG", "source": "2026-04-18",
+      "text": "Lindas kylskåp har tre hyllor. I kylskåpet finns det endast ett mjölkpaket, en ketchupflaska och ett salladshuvud. På vilken hylla finns mjölkpaketet?\n\n(1) Mjölkpaketet och ketchupflaskan finns på samma hylla. Salladshuvudet finns på den nedersta hyllan.\n(2) Den översta hyllan är tom. Salladshuvudet finns på hyllan under mjölkpaketet.\n\nTillräcklig information för lösningen erhålls",
+      "options": ["i (1) men ej i (2)", "i (2) men ej i (1)", "i (1) tillsammans med (2)", "i (1) och (2) var för sig", "ej genom de båda påståendena"],
+      "correct": 1,
+      "explanation": "(1) placerar inte mjölken entydigt (översta eller mellersta). (2): översta tom och salladen under mjölken ger mjölk = mellersta, sallad = nedersta. Alltså i (2) men ej i (1)."
+    },
+    {
+      "id": "2026-04-18-p3-NOG-26", "section": "NOG", "source": "2026-04-18",
+      "text": "En grupp består av $x$ personer, där $20<x<60$. Vilket värde har $x$?\n\n(1) Gruppen kan delas in i mindre grupper med sju personer i varje grupp.\n(2) Om gruppen delas in i mindre grupper med fem personer i varje grupp, så blir det fyra personer över.\n\nTillräcklig information för lösningen erhålls",
+      "options": ["i (1) men ej i (2)", "i (2) men ej i (1)", "i (1) tillsammans med (2)", "i (1) och (2) var för sig", "ej genom de båda påståendena"],
+      "correct": 2,
+      "explanation": "(1): $x$ delbart med 7 ger $\\{21,28,35,42,49,56\\}$. (2): $x\\equiv4\\pmod5$ ger flera värden. Tillsammans är bara $x=49$ både delbart med 7 och ger rest 4 vid division med 5. Alltså (1) tillsammans med (2)."
+    },
+    {
+      "id": "2026-04-18-p3-NOG-27", "section": "NOG", "source": "2026-04-18",
+      "text": "Hur stor area har den rätvinkliga triangeln ABC?\n\n(1) I triangeln ABC är hypotenusan 4 cm, och den kortare kateten är 2 cm.\n(2) I triangeln ABC är hypotenusan 4 cm, och vinkeln mellan hypotenusan och den kortare kateten är $60^\\circ$.\n\nTillräcklig information för lösningen erhålls",
+      "options": ["i (1) men ej i (2)", "i (2) men ej i (1)", "i (1) tillsammans med (2)", "i (1) och (2) var för sig", "ej genom de båda påståendena"],
+      "correct": 3,
+      "explanation": "(1): andra kateten $=\\sqrt{4^2-2^2}=\\sqrt{12}$, arean bestäms. (2): kortare kateten $=4\\cos60^\\circ=2$, andra $=4\\sin60^\\circ=2\\sqrt3$, arean bestäms. Var och en räcker — i (1) och (2) var för sig."
+    },
+    {
+      "id": "2026-04-18-p3-NOG-28", "section": "NOG", "source": "2026-04-18",
+      "text": "En affär säljer madrasser: hårda och mjuka. Var och en av madrasserna är 90 cm bred eller 120 cm bred. Affären har 35 madrasser. Hur många av madrasserna är mjuka?\n\n(1) Tjugo av madrasserna är 90 cm breda, och hälften av dessa är mjuka.\n(2) Av de hårda madrasserna är tio stycken 90 cm breda och sex stycken 120 cm breda.\n\nTillräcklig information för lösningen erhålls",
+      "options": ["i (1) men ej i (2)", "i (2) men ej i (1)", "i (1) tillsammans med (2)", "i (1) och (2) var för sig", "ej genom de båda påståendena"],
+      "correct": 1,
+      "explanation": "(1) säger bara att 10 av de 90 cm breda är mjuka — inget om de 120 cm breda. (2): hårda = 10 + 6 = 16, så mjuka = 35 − 16 = 19. Alltså i (2) men ej i (1)."
+    }
+  ]
+}

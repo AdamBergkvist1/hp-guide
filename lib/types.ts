@@ -35,6 +35,8 @@ export interface Question {
   source: string;
   /** Bild som hör till frågan (geometrifigur, DTK-diagram) — URL under /public */
   image?: string;
+  /** Svarsalternativ som bilder (t.ex. grafer). Samma längd som options. */
+  optionImages?: string[];
 }
 
 export interface Attempt {

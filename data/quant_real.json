@@ -57,6 +57,19 @@
       "explanation": "$8=2^3$, så $8^2=2^6$. Då är $2^3\\cdot2^6=2^9$, alltså $x=9$."
     },
     {
+      "id": "2026-04-18-p3-XYZ-9", "section": "XYZ", "source": "2026-04-18",
+      "text": "Den räta linjen $L$ ges av ekvationen $2y+x=2$. Vilket svarsalternativ visar linjen $L$?",
+      "options": ["", "", "", ""],
+      "optionImages": [
+        "/quant-img/xyz9-2026-04-18-A.png",
+        "/quant-img/xyz9-2026-04-18-B.png",
+        "/quant-img/xyz9-2026-04-18-C.png",
+        "/quant-img/xyz9-2026-04-18-D.png"
+      ],
+      "correct": 1,
+      "explanation": "$2y+x=2$ ger $y=1-\\dfrac{x}{2}$: linjen skär $y$-axeln i $1$ och $x$-axeln i $2$ (lutning $-\\tfrac12$). Det stämmer med alternativ B."
+    },
+    {
       "id": "2026-04-18-p3-XYZ-10", "section": "XYZ", "source": "2026-04-18",
       "text": "Vad är $150\\,\\%$ av $50\\,\\%$ av $60$?",
       "options": ["$45$", "$60$", "$75$", "$90$"],

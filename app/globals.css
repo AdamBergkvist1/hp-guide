@@ -327,6 +327,27 @@ h2.category {
   opacity: 0.55;
 }
 
+/* Bild-alternativ (t.ex. grafer): 2×2-rutnät med bild i varje knapp */
+.options-img {
+  grid-template-columns: 1fr 1fr;
+}
+.options-img .option {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.option-image {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+}
+@media (max-width: 460px) {
+  .options-img {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Feedback / success state */
 .feedback {
   margin-top: 18px;

@@ -166,7 +166,7 @@ export default function PracticePage() {
         <img className="question-image" src={q.image} alt="Figur till frågan" />
       )}
 
-      <div className="options">
+      <div className={`options ${q.optionImages ? "options-img" : ""}`}>
         {q.options.map((opt, i) => {
           let cls = "option";
           if (answered) {
@@ -182,9 +182,18 @@ export default function PracticePage() {
               disabled={answered}
             >
               <span className="letter">{LETTERS[i]}</span>
-              <span>
-                <MathText>{opt}</MathText>
-              </span>
+              {q.optionImages ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  className="option-image"
+                  src={q.optionImages[i]}
+                  alt={`Alternativ ${LETTERS[i]}`}
+                />
+              ) : (
+                <span>
+                  <MathText>{opt}</MathText>
+                </span>
+              )}
             </button>
           );
         })}

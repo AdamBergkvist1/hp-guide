@@ -27,10 +27,13 @@
       mot facit + lösta. Ligger i data/quant_real.json.
 - [x] KVA April 2026: 10 frågor typsatt matte, verifierade mot facit.
       Fråga 14 (triangelfigur) som bild (public/quant-img/) — bildstöd byggt (question.image).
-- [ ] XYZ April 2026 fråga 9: grafer som SVARSALTERNATIV (bild-alternativ) —
-      kräver optionImages (annan typ än question.image). Nästa lilla steg.
-- [ ] Kvant forts: NOG (transkribera), DTK (tabell/diagram som bild + grupperade
-      frågor som LÄS). Sen övriga två prov (okt25, apr25).
+- [x] XYZ fråga 9: grafer som svarsalternativ (optionImages) — bild-alternativ i
+      2×2-rutnät. XYZ nu komplett (12 frågor).
+- [x] NOG April 2026: 6 frågor transkriberade, verifierade mot facit + lösta.
+      Provets riktiga 5-alternativsformat ("i (1) men ej i (2)" osv).
+- [ ] DTK: tabell/diagram/karta som bild + grupperade frågor (som LÄS). Nästa steg.
+- [ ] Övriga två prov (okt25, apr25): transkribera kvant på samma sätt.
+- [ ] Formel-/pluggflik för matten (Adams idé).
 - [ ] Provläge + normering (se visionen nedan)
 - [ ] Designrunda: skärmdumpar från hpguiden.se/HPappen.se, animeringar/success states
 - [ ] Egna ELF-frågor om vi vill träna engelska (låg prio) — äkta ELF finns ej (upphovsrätt)

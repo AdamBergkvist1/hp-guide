@@ -1,27 +1,6 @@
 {
   "questions": [
     {
-      "id": "sample-kva-1", "section": "KVA", "source": "sample",
-      "text": "Kvantitet I: 2⁵\nKvantitet II: 5²",
-      "options": ["I är större än II", "II är större än I", "I är lika med II", "informationen är otillräcklig"],
-      "correct": 0,
-      "explanation": "2⁵ = 32 och 5² = 25, så kvantitet I är större."
-    },
-    {
-      "id": "sample-kva-2", "section": "KVA", "source": "sample",
-      "text": "x är ett positivt heltal.\n\nKvantitet I: 3x\nKvantitet II: x³",
-      "options": ["I är större än II", "II är större än I", "I är lika med II", "informationen är otillräcklig"],
-      "correct": 3,
-      "explanation": "För x = 1: 3 > 1. För x = 3: 9 < 27. Förhållandet varierar — informationen är otillräcklig."
-    },
-    {
-      "id": "sample-kva-3", "section": "KVA", "source": "sample",
-      "text": "Kvantitet I: 25 % av 80\nKvantitet II: 80 % av 25",
-      "options": ["I är större än II", "II är större än I", "I är lika med II", "informationen är otillräcklig"],
-      "correct": 2,
-      "explanation": "0,25 × 80 = 20 och 0,80 × 25 = 20. Lika stora — procent är kommutativt."
-    },
-    {
       "id": "sample-nog-1", "section": "NOG", "source": "sample",
       "text": "Hur gammal är Maria?\n\n(1) Maria är dubbelt så gammal som sin bror.\n(2) Marias bror är 12 år.",
       "options": [

@@ -272,6 +272,17 @@ h2.category {
   margin-bottom: 20px;
   white-space: pre-wrap;
 }
+.question-image {
+  display: block;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  margin: 0 0 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+}
 
 .options {
   display: grid;

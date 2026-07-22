@@ -161,6 +161,11 @@ export default function PracticePage() {
         <MathText>{q.text}</MathText>
       </div>
 
+      {q.image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="question-image" src={q.image} alt="Figur till frågan" />
+      )}
+
       <div className="options">
         {q.options.map((opt, i) => {
           let cls = "option";

@@ -431,11 +431,13 @@ def main():
             # LÄS (11–20)
             questions.extend(extract_las(pdf, answers, code, passn))
 
-    # Riktiga transkriberade kvantfrågor (XYZ m.fl.) + kvarvarande platshållare
-    for extra in ("quant_real.json", "placeholder_quant.json"):
-        p = ROOT / "data" / extra
-        if p.exists():
-            questions.extend(json.loads(p.read_text(encoding="utf-8"))["questions"])
+    # Riktiga transkriberade kvantfrågor (alla data/quant_*.json) + platshållare
+    data_dir = ROOT / "data"
+    for p in sorted(data_dir.glob("quant_*.json")):
+        questions.extend(json.loads(p.read_text(encoding="utf-8"))["questions"])
+    placeholder = data_dir / "placeholder_quant.json"
+    if placeholder.exists():
+        questions.extend(json.loads(placeholder.read_text(encoding="utf-8"))["questions"])
 
     OUT.write_text(
         json.dumps({"sections": SECTIONS, "questions": questions},

@@ -25,11 +25,12 @@
 - [x] KaTeX-typsättning i appen (components/MathText.tsx renderar $...$).
 - [x] XYZ April 2026: 11 frågor transkriberade till typsatt matte, verifierade
       mot facit + lösta. Ligger i data/quant_real.json.
-- [ ] XYZ April 2026 fråga 9: grafer som svarsalternativ (bild) — kräver
-      bildfrågetyp. Nästa lilla steg.
-- [ ] Kvant forts: KVA, NOG (transkribera likt XYZ), DTK (tabell/diagram som bild
-      + grupperade frågor som LÄS). Sen övriga två prov.
-- [ ] Figurfrågor (geometri i XYZ, grafer): bildfrågetyp i appen.
+- [x] KVA April 2026: 10 frågor typsatt matte, verifierade mot facit.
+      Fråga 14 (triangelfigur) som bild (public/quant-img/) — bildstöd byggt (question.image).
+- [ ] XYZ April 2026 fråga 9: grafer som SVARSALTERNATIV (bild-alternativ) —
+      kräver optionImages (annan typ än question.image). Nästa lilla steg.
+- [ ] Kvant forts: NOG (transkribera), DTK (tabell/diagram som bild + grupperade
+      frågor som LÄS). Sen övriga två prov (okt25, apr25).
 - [ ] Provläge + normering (se visionen nedan)
 - [ ] Designrunda: skärmdumpar från hpguiden.se/HPappen.se, animeringar/success states
 - [ ] Egna ELF-frågor om vi vill träna engelska (låg prio) — äkta ELF finns ej (upphovsrätt)

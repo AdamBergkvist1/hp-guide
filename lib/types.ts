@@ -33,7 +33,7 @@ export interface Question {
   explanation: string;
   /** "sample" = handskriven testfråga, annars provkod t.ex. "2023-ht" */
   source: string;
-  /** Framtida bildstöd (DTK) */
+  /** Bild som hör till frågan (geometrifigur, DTK-diagram) — URL under /public */
   image?: string;
 }
 

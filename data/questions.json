@@ -2781,6 +2781,147 @@
       "source": "2026-04-18"
     },
     {
+      "id": "2026-04-18-p3-KVA-13",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "$x>4$\n\nKvantitet I: $\\dfrac{1}{x}$\n\nKvantitet II: $\\dfrac{1}{4}$",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 1,
+      "explanation": "Eftersom $x>4$ är $\\dfrac{1}{x}<\\dfrac{1}{4}$. Alltså är II större än I."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-14",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "image": "/quant-img/kva14-2026-04-18.png",
+      "text": "Triangeln ABC är rätvinklig vid A, med kateterna $AC=4$ cm och $AB=2$ cm.\n\nKvantitet I: Längden av hypotenusan i triangeln ABC\n\nKvantitet II: $5$ cm",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 1,
+      "explanation": "Hypotenusan är $\\sqrt{4^2+2^2}=\\sqrt{20}\\approx4{,}47$ cm, vilket är mindre än $5$ cm. Alltså är II större än I."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-15",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "Kvantitet I: Ett femsiffrigt tal som skrivs med endast sexor och sjuor\n\nKvantitet II: Ett femsiffrigt tal som skrivs med endast sexor och åttor",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 3,
+      "explanation": "T.ex. kan I vara 77777 (större än 66666) eller 66666 (mindre än 88888). Förhållandet varierar — informationen är otillräcklig."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-16",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "$x^2=4$\n\nKvantitet I: $(-2)^{x+2}$\n\nKvantitet II: $(-2)^{x+3}$",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 0,
+      "explanation": "$x=\\pm2$. För $x=2$: I$=(-2)^4=16$, II$=(-2)^5=-32$. För $x=-2$: I$=(-2)^0=1$, II$=(-2)^1=-2$. I båda fallen är I större än II."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-17",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "$x>0$\n$y>0$\n\nKvantitet I: Medelvärdet av $x$ och $y$\n\nKvantitet II: Medelvärdet av $2x$ och $\\dfrac{y}{2}$",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 3,
+      "explanation": "I$=\\dfrac{x+y}{2}$ och II$=\\dfrac{2x+y/2}{2}=x+\\dfrac{y}{4}$. Skillnaden II$-$I$=\\dfrac{x}{2}-\\dfrac{y}{4}$ kan vara positiv eller negativ beroende på $x$ och $y$ — otillräckligt."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-18",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "Kvantitet I: Summan av fyra olika ensiffriga jämna positiva heltal\n\nKvantitet II: Summan av tre olika ensiffriga udda positiva heltal",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 3,
+      "explanation": "I är alltid $2+4+6+8=20$. II kan vara allt från $1+3+5=9$ till $5+7+9=21$. Eftersom II kan vara både mindre och större än 20 är informationen otillräcklig."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-19",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "Kvantitet I: $\\dfrac{1}{3}-\\dfrac{1}{2}$\n\nKvantitet II: $\\dfrac{1}{2}\\cdot\\left(-\\dfrac{1}{3}\\right)$",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 2,
+      "explanation": "I$=\\dfrac{2}{6}-\\dfrac{3}{6}=-\\dfrac{1}{6}$ och II$=-\\dfrac{1}{6}$. De är lika."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-20",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "Kvantitet I: Omkretsen av en cirkel med radien $5$ cm\n\nKvantitet II: Omkretsen av en rektangel med sidlängderna $5{,}5$ cm och $10$ cm",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 0,
+      "explanation": "I$=2\\pi\\cdot5=10\\pi\\approx31{,}4$ cm. II$=2(5{,}5+10)=31$ cm. Alltså är I något större än II."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-21",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "$-1<x<0<y<1$\n\nKvantitet I: $\\dfrac{x}{y}$\n\nKvantitet II: $\\dfrac{y}{x}$",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 3,
+      "explanation": "Båda kvoterna är negativa. Med $x=-0{,}1,\\ y=0{,}5$ blir I$=-0{,}2>$II$=-5$. Med $x=-0{,}5,\\ y=0{,}1$ blir II större. Förhållandet varierar — otillräckligt."
+    },
+    {
+      "id": "2026-04-18-p3-KVA-22",
+      "section": "KVA",
+      "source": "2026-04-18",
+      "text": "För funktionen $f(x)=kx+m$ gäller att $m>0$ och att $f(a)=0$ för något $a>0$.\n\nKvantitet I: $k$\n\nKvantitet II: $0$",
+      "options": [
+        "I är större än II",
+        "II är större än I",
+        "I är lika med II",
+        "informationen är otillräcklig"
+      ],
+      "correct": 1,
+      "explanation": "$f(a)=ka+m=0$ ger $k=-\\dfrac{m}{a}$. Med $m>0$ och $a>0$ är $k<0$, alltså är II ($0$) större än I ($k$)."
+    },
+    {
       "id": "2026-04-18-p3-XYZ-1",
       "section": "XYZ",
       "source": "2026-04-18",
@@ -2933,48 +3074,6 @@
       ],
       "correct": 2,
       "explanation": "$\\dfrac{2\\sqrt3}{3\\sqrt2}=\\dfrac{2}{3}\\sqrt{\\dfrac{3}{2}}=\\sqrt{\\dfrac{4}{9}\\cdot\\dfrac{3}{2}}=\\sqrt{\\dfrac{2}{3}}\\approx0{,}816$."
-    },
-    {
-      "id": "sample-kva-1",
-      "section": "KVA",
-      "source": "sample",
-      "text": "Kvantitet I: 2⁵\nKvantitet II: 5²",
-      "options": [
-        "I är större än II",
-        "II är större än I",
-        "I är lika med II",
-        "informationen är otillräcklig"
-      ],
-      "correct": 0,
-      "explanation": "2⁵ = 32 och 5² = 25, så kvantitet I är större."
-    },
-    {
-      "id": "sample-kva-2",
-      "section": "KVA",
-      "source": "sample",
-      "text": "x är ett positivt heltal.\n\nKvantitet I: 3x\nKvantitet II: x³",
-      "options": [
-        "I är större än II",
-        "II är större än I",
-        "I är lika med II",
-        "informationen är otillräcklig"
-      ],
-      "correct": 3,
-      "explanation": "För x = 1: 3 > 1. För x = 3: 9 < 27. Förhållandet varierar — informationen är otillräcklig."
-    },
-    {
-      "id": "sample-kva-3",
-      "section": "KVA",
-      "source": "sample",
-      "text": "Kvantitet I: 25 % av 80\nKvantitet II: 80 % av 25",
-      "options": [
-        "I är större än II",
-        "II är större än I",
-        "I är lika med II",
-        "informationen är otillräcklig"
-      ],
-      "correct": 2,
-      "explanation": "0,25 × 80 = 20 och 0,80 × 25 = 20. Lika stora — procent är kommutativt."
     },
     {
       "id": "sample-nog-1",

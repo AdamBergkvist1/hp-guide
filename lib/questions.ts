@@ -20,6 +20,22 @@ export function countQuestions(id: SectionId): number {
   return getQuestionsForSection(id).length;
 }
 
+export type SectionStatus = "real" | "sample" | "empty";
+
+export interface SectionMeta {
+  count: number;
+  realCount: number;
+  status: SectionStatus;
+}
+
+export function getSectionMeta(id: SectionId): SectionMeta {
+  const qs = getQuestionsForSection(id);
+  const realCount = qs.filter((q) => q.source !== "sample").length;
+  const status: SectionStatus =
+    qs.length === 0 ? "empty" : realCount > 0 ? "real" : "sample";
+  return { count: qs.length, realCount, status };
+}
+
 /** Fisher–Yates-blandning, muterar inte originalet */
 export function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];

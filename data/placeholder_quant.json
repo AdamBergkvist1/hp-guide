@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "sample-xyz-1", "section": "XYZ", "source": "sample",
+      "text": "Om 3x + 7 = 22, vad är x?",
+      "options": ["3", "5", "7", "15"], "correct": 1,
+      "explanation": "3x = 22 − 7 = 15, alltså x = 5."
+    },
+    {
+      "id": "sample-xyz-2", "section": "XYZ", "source": "sample",
+      "text": "Ett pris höjs med 20 % och sänks sedan med 20 %. Hur förhåller sig det nya priset till det ursprungliga?",
+      "options": ["Det är lika stort", "Det är 4 % lägre", "Det är 4 % högre", "Det är 2 % lägre"],
+      "correct": 1,
+      "explanation": "1,20 × 0,80 = 0,96 — priset blir 96 % av det ursprungliga, alltså 4 % lägre."
+    },
+    {
+      "id": "sample-xyz-3", "section": "XYZ", "source": "sample",
+      "text": "Medelvärdet av fem tal är 12. Fyra av talen är 10, 11, 13 och 14. Vilket är det femte talet?",
+      "options": ["10", "11", "12", "13"], "correct": 2,
+      "explanation": "Summan är 5 × 12 = 60. De fyra talen ger 48, så det femte är 60 − 48 = 12."
+    },
+    {
+      "id": "sample-xyz-4", "section": "XYZ", "source": "sample",
+      "text": "Hur många procent är 45 av 180?",
+      "options": ["20 %", "25 %", "30 %", "40 %"], "correct": 1,
+      "explanation": "45/180 = 0,25 = 25 %."
+    },
+    {
+      "id": "sample-xyz-5", "section": "XYZ", "source": "sample",
+      "text": "En rektangel har omkretsen 28 cm. Längden är 2 cm större än bredden. Vad är arean?",
+      "options": ["40 cm²", "45 cm²", "48 cm²", "49 cm²"], "correct": 2,
+      "explanation": "l + b = 14 och l = b + 2 ger b = 6 och l = 8. Arean är 8 × 6 = 48 cm²."
+    },
+    {
+      "id": "sample-kva-1", "section": "KVA", "source": "sample",
+      "text": "Kvantitet I: 2⁵\nKvantitet II: 5²",
+      "options": ["I är större än II", "II är större än I", "I är lika med II", "informationen är otillräcklig"],
+      "correct": 0,
+      "explanation": "2⁵ = 32 och 5² = 25, så kvantitet I är större."
+    },
+    {
+      "id": "sample-kva-2", "section": "KVA", "source": "sample",
+      "text": "x är ett positivt heltal.\n\nKvantitet I: 3x\nKvantitet II: x³",
+      "options": ["I är större än II", "II är större än I", "I är lika med II", "informationen är otillräcklig"],
+      "correct": 3,
+      "explanation": "För x = 1: 3 > 1. För x = 3: 9 < 27. Förhållandet varierar — informationen är otillräcklig."
+    },
+    {
+      "id": "sample-kva-3", "section": "KVA", "source": "sample",
+      "text": "Kvantitet I: 25 % av 80\nKvantitet II: 80 % av 25",
+      "options": ["I är större än II", "II är större än I", "I är lika med II", "informationen är otillräcklig"],
+      "correct": 2,
+      "explanation": "0,25 × 80 = 20 och 0,80 × 25 = 20. Lika stora — procent är kommutativt."
+    },
+    {
+      "id": "sample-nog-1", "section": "NOG", "source": "sample",
+      "text": "Hur gammal är Maria?\n\n(1) Maria är dubbelt så gammal som sin bror.\n(2) Marias bror är 12 år.",
+      "options": [
+        "(1) ensam är tillräcklig, men inte (2) ensam",
+        "(2) ensam är tillräcklig, men inte (1) ensam",
+        "(1) och (2) tillsammans är tillräckliga, men ingen av dem ensam",
+        "(1) ensam är tillräcklig, och (2) ensam är tillräcklig",
+        "informationen är otillräcklig även tillsammans"
+      ],
+      "correct": 2,
+      "explanation": "Ingen uppgift räcker ensam, men tillsammans: 2 × 12 = 24 år."
+    },
+    {
+      "id": "sample-nog-2", "section": "NOG", "source": "sample",
+      "text": "Vad kostar en biobiljett? (Alla biljetter kostar lika mycket.)\n\n(1) Tre biljetter kostar 360 kr.\n(2) Fyra biljetter kostar 240 kr mer än två biljetter.",
+      "options": [
+        "(1) ensam är tillräcklig, men inte (2) ensam",
+        "(2) ensam är tillräcklig, men inte (1) ensam",
+        "(1) och (2) tillsammans är tillräckliga, men ingen av dem ensam",
+        "(1) ensam är tillräcklig, och (2) ensam är tillräcklig",
+        "informationen är otillräcklig även tillsammans"
+      ],
+      "correct": 3,
+      "explanation": "(1): 360/3 = 120 kr — räcker ensam. (2): skillnaden 240 kr motsvarar två biljetter, alltså 120 kr styck — räcker också ensam. Båda är var för sig tillräckliga."
+    },
+    {
+      "id": "sample-dtk-1", "section": "DTK", "source": "sample",
+      "text": "Tabell: Antal sålda cyklar per kvartal\n\nQ1: 120 | Q2: 180 | Q3: 240 | Q4: 60\n\nHur stor andel av årets försäljning skedde under Q3?",
+      "options": ["25 %", "30 %", "40 %", "45 %"], "correct": 2,
+      "explanation": "Totalt: 120+180+240+60 = 600. Q3: 240/600 = 40 %."
+    },
+    {
+      "id": "sample-dtk-2", "section": "DTK", "source": "sample",
+      "text": "Tabell: Antal sålda cyklar per kvartal\n\nQ1: 120 | Q2: 180 | Q3: 240 | Q4: 60\n\nHur många procent fler cyklar såldes under Q3 än under Q1?",
+      "options": ["50 %", "75 %", "100 %", "120 %"], "correct": 2,
+      "explanation": "240 jämfört med 120 är en ökning med 120/120 = 100 %."
+    }
+  ]
+}

@@ -1,161 +1,709 @@
 {
   "sections": [
-    { "id": "ORD", "name": "Ordförståelse", "category": "verbal", "description": "Välj det ord som bäst motsvarar det givna ordet." },
-    { "id": "LAS", "name": "Läsförståelse", "category": "verbal", "description": "Läs en text och svara på frågor om innehållet." },
-    { "id": "MEK", "name": "Meningskomplettering", "category": "verbal", "description": "Välj de ord som passar bäst i luckorna." },
-    { "id": "ELF", "name": "Engelsk läsförståelse", "category": "verbal", "description": "Läs en engelsk text och svara på frågor." },
-    { "id": "XYZ", "name": "Matematisk problemlösning", "category": "kvantitativ", "description": "Lös matematiska problem." },
-    { "id": "KVA", "name": "Kvantitativa jämförelser", "category": "kvantitativ", "description": "Jämför två kvantiteter och avgör vilken som är störst." },
-    { "id": "NOG", "name": "Kvantitativa resonemang", "category": "kvantitativ", "description": "Avgör vilken information som räcker för att besvara frågan." },
-    { "id": "DTK", "name": "Diagram, tabeller och kartor", "category": "kvantitativ", "description": "Tolka diagram, tabeller och kartor." }
+    {
+      "id": "ORD",
+      "name": "Ordförståelse",
+      "category": "verbal",
+      "description": "Välj det ord som bäst motsvarar det givna ordet."
+    },
+    {
+      "id": "LAS",
+      "name": "Läsförståelse",
+      "category": "verbal",
+      "description": "Läs en text och svara på frågor om innehållet."
+    },
+    {
+      "id": "MEK",
+      "name": "Meningskomplettering",
+      "category": "verbal",
+      "description": "Välj de ord som passar bäst i luckorna."
+    },
+    {
+      "id": "ELF",
+      "name": "Engelsk läsförståelse",
+      "category": "verbal",
+      "description": "Läs en engelsk text och svara på frågor."
+    },
+    {
+      "id": "XYZ",
+      "name": "Matematisk problemlösning",
+      "category": "kvantitativ",
+      "description": "Lös matematiska problem."
+    },
+    {
+      "id": "KVA",
+      "name": "Kvantitativa jämförelser",
+      "category": "kvantitativ",
+      "description": "Jämför två kvantiteter och avgör vilken som är störst."
+    },
+    {
+      "id": "NOG",
+      "name": "Kvantitativa resonemang",
+      "category": "kvantitativ",
+      "description": "Avgör vilken information som räcker för att besvara frågan."
+    },
+    {
+      "id": "DTK",
+      "name": "Diagram, tabeller och kartor",
+      "category": "kvantitativ",
+      "description": "Tolka diagram, tabeller och kartor."
+    }
   ],
   "questions": [
     {
-      "id": "ord-1", "section": "ORD", "source": "sample",
-      "text": "**gagna**",
-      "options": ["skada", "vara till nytta", "förvirra", "undvika", "påskynda"],
-      "correct": 1,
-      "explanation": "Gagna betyder att vara till nytta eller fördel för någon."
+      "id": "2026-04-18-pass2-ORD-2",
+      "section": "ORD",
+      "text": "slug",
+      "options": [
+        "ivrig",
+        "otäck",
+        "girig",
+        "envis",
+        "listig"
+      ],
+      "correct": 4,
+      "explanation": "Rätt svar enligt facit: E.",
+      "source": "2026-04-18"
     },
     {
-      "id": "ord-2", "section": "ORD", "source": "sample",
-      "text": "**obsolet**",
-      "options": ["föråldrad", "nödvändig", "otydlig", "omfattande", "främmande"],
-      "correct": 0,
-      "explanation": "Obsolet betyder föråldrad — något som inte längre används."
-    },
-    {
-      "id": "ord-3", "section": "ORD", "source": "sample",
-      "text": "**vedermöda**",
-      "options": ["belöning", "eldsvåda", "svårighet", "tradition", "vrede"],
-      "correct": 2,
-      "explanation": "Vedermöda betyder lidande, prövning eller stor svårighet."
-    },
-    {
-      "id": "ord-4", "section": "ORD", "source": "sample",
-      "text": "**konsensus**",
-      "options": ["motsättning", "enighet", "beräkning", "tillstånd", "sammanfattning"],
-      "correct": 1,
-      "explanation": "Konsensus betyder samstämmighet eller enighet inom en grupp."
-    },
-    {
-      "id": "ord-5", "section": "ORD", "source": "sample",
-      "text": "**subtil**",
-      "options": ["hånfull", "underjordisk", "kraftfull", "hårfin", "långsam"],
+      "id": "2026-04-18-pass2-ORD-1",
+      "section": "ORD",
+      "text": "prognos",
+      "options": [
+        "besked",
+        "utvärdering",
+        "sammanfattning",
+        "förutsägelse",
+        "redovisning"
+      ],
       "correct": 3,
-      "explanation": "Subtil betyder hårfin, svårfångad eller knappt märkbar."
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
     },
     {
-      "id": "ord-6", "section": "ORD", "source": "sample",
-      "text": "**premiss**",
-      "options": ["slutsats", "förutsättning", "belöning", "invändning", "avsikt"],
-      "correct": 1,
-      "explanation": "En premiss är en förutsättning eller ett antagande som ett resonemang bygger på."
-    },
-    {
-      "id": "mek-1", "section": "MEK", "source": "sample",
-      "text": "Forskarna var försiktiga med att dra slutsatser, eftersom resultaten var ____ och kunde tolkas på flera sätt.",
-      "options": ["entydiga", "tvetydiga", "slutgiltiga", "obestridliga"],
-      "correct": 1,
-      "explanation": "Att resultaten kunde tolkas på flera sätt betyder att de var tvetydiga."
-    },
-    {
-      "id": "mek-2", "section": "MEK", "source": "sample",
-      "text": "Trots att förslaget mötte hårt ____ i debatten valde regeringen att ____ det i sin helhet.",
-      "options": ["stöd — förkasta", "motstånd — genomföra", "gillande — granska", "tvivel — avfärda"],
-      "correct": 1,
-      "explanation": "\"Trots att\" signalerar kontrast: hårt motstånd — men ändå genomföra."
-    },
-    {
-      "id": "mek-3", "section": "MEK", "source": "sample",
-      "text": "Hennes argumentation var så ____ att även de mest kritiska åhörarna lät sig övertygas.",
-      "options": ["osammanhängande", "övertygande", "provocerande", "återhållsam"],
-      "correct": 1,
-      "explanation": "Att kritiska åhörare övertygas kräver en övertygande argumentation."
-    },
-    {
-      "id": "mek-4", "section": "MEK", "source": "sample",
-      "text": "Kommunen beslutade att ____ byggplanerna i väntan på miljöutredningens resultat.",
-      "options": ["skjuta upp", "utvidga", "offentliggöra", "verkställa"],
-      "correct": 0,
-      "explanation": "\"I väntan på\" utredningen antyder att planerna pausas — skjuts upp."
-    },
-    {
-      "id": "las-1", "section": "LAS", "source": "sample",
-      "passage": "Sömnforskningen har de senaste decennierna genomgått ett skifte. Länge betraktades sömnen främst som ett passivt vilotillstånd, en paus i hjärnans aktivitet. Idag vet vi att hjärnan under sömnen utför avgörande arbete: minnen konsolideras, restprodukter rensas bort och känslomässiga intryck bearbetas. Särskilt djupsömnen tycks spela en central roll för inlärning. Studier visar att personer som får tillräckligt med djupsömn efter att ha lärt sig något nytt presterar markant bättre på minnestester än de som sovit ytligt eller för kort. Samtidigt varnar forskare för att samhällets dygnsrytm — med tidiga skolstarter och sena skärmvanor — systematiskt motarbetar goda sömnvanor, i synnerhet hos unga.",
-      "text": "Vilket påstående sammanfattar bäst textens huvudpoäng?",
+      "id": "2026-04-18-pass2-ORD-4",
+      "section": "ORD",
+      "text": "potential",
       "options": [
-        "Sömnen är ett passivt vilotillstånd som ger hjärnan en nödvändig paus.",
-        "Synen på sömnen har förändrats: den ses idag som aktiv och avgörande, bland annat för inlärning.",
-        "Tidiga skolstarter är den främsta orsaken till ungas sömnbrist.",
-        "Minnestester är det bästa sättet att mäta sömnkvalitet."
+        "stor skicklighet",
+        "inneboende möjligheter",
+        "sannolikt resultat",
+        "betydande framgångar",
+        "starka förhoppningar"
       ],
       "correct": 1,
-      "explanation": "Texten beskriver skiftet från synen på sömn som passiv till aktiv, med inlärning som centralt exempel. Övriga alternativ är antingen motsatsen till textens poäng eller detaljer."
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
     },
     {
-      "id": "las-2", "section": "LAS", "source": "sample",
-      "passage": "Sömnforskningen har de senaste decennierna genomgått ett skifte. Länge betraktades sömnen främst som ett passivt vilotillstånd, en paus i hjärnans aktivitet. Idag vet vi att hjärnan under sömnen utför avgörande arbete: minnen konsolideras, restprodukter rensas bort och känslomässiga intryck bearbetas. Särskilt djupsömnen tycks spela en central roll för inlärning. Studier visar att personer som får tillräckligt med djupsömn efter att ha lärt sig något nytt presterar markant bättre på minnestester än de som sovit ytligt eller för kort. Samtidigt varnar forskare för att samhällets dygnsrytm — med tidiga skolstarter och sena skärmvanor — systematiskt motarbetar goda sömnvanor, i synnerhet hos unga.",
-      "text": "Vad framhålls om djupsömnen i texten?",
+      "id": "2026-04-18-pass2-ORD-3",
+      "section": "ORD",
+      "text": "eftertrakta",
       "options": [
-        "Den är viktigast för att rensa restprodukter.",
-        "Den försämras främst av skärmvanor.",
-        "Den tycks vara särskilt viktig för inlärning.",
-        "Den är kortare hos unga än hos vuxna."
+        "ta reda på",
+        "följa efter",
+        "härma",
+        "vilja ha",
+        "fundera på"
+      ],
+      "correct": 3,
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-ORD-6",
+      "section": "ORD",
+      "text": "plombering",
+      "options": [
+        "avskärmning",
+        "omledning",
+        "försegling",
+        "urgröpning",
+        "återställning"
       ],
       "correct": 2,
-      "explanation": "Texten säger uttryckligen att djupsömnen \"tycks spela en central roll för inlärning\"."
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
     },
     {
-      "id": "elf-1", "section": "ELF", "source": "sample",
-      "passage": "The bicycle, often dismissed as a relic of the pre-automobile era, is quietly staging a comeback in cities around the world. Urban planners increasingly view cycling infrastructure not as a luxury but as a solution to congestion, air pollution and public health crises. Copenhagen, where more than 60 percent of residents commute by bike, is frequently cited as proof that such a shift is possible — though critics note that its flat terrain and compact size make comparisons with sprawling, hilly cities somewhat misleading.",
-      "text": "What point do critics make about Copenhagen, according to the text?",
+      "id": "2026-04-18-pass2-ORD-5",
+      "section": "ORD",
+      "text": "utomordentlig",
       "options": [
-        "Its cycling statistics are exaggerated by urban planners.",
-        "Its geography makes it a poor model for many other cities.",
-        "Its bicycle infrastructure has worsened congestion.",
-        "Its residents cycle mainly for health reasons."
+        "märklig",
+        "förhastad",
+        "oavsiktlig",
+        "förträfflig",
+        "noggrann"
+      ],
+      "correct": 3,
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-ORD-8",
+      "section": "ORD",
+      "text": "fadäs",
+      "options": [
+        "elakt skämt",
+        "kort vistelse",
+        "påminnelse",
+        "oförutsedd utgift",
+        "pinsamt misstag"
+      ],
+      "correct": 4,
+      "explanation": "Rätt svar enligt facit: E.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-ORD-7",
+      "section": "ORD",
+      "text": "miserabel",
+      "options": [
+        "eländig",
+        "vilsen",
+        "bitter",
+        "plågsam",
+        "otrevlig"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-ORD-9",
+      "section": "ORD",
+      "text": "ingalunda",
+      "options": [
+        "inte alls",
+        "i onödan",
+        "undantagsvis",
+        "otillräckligt",
+        "ingenstans"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-ORD-10",
+      "section": "ORD",
+      "text": "erinra sig",
+      "options": [
+        "undersöka",
+        "minnas",
+        "lugna sig",
+        "avvakta",
+        "invänta"
       ],
       "correct": 1,
-      "explanation": "Critics note that Copenhagen's flat terrain and compact size make comparisons with other cities \"somewhat misleading\" — i.e. its geography limits its usefulness as a model."
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
     },
     {
-      "id": "xyz-1", "section": "XYZ", "source": "sample",
+      "id": "2026-04-18-pass2-MEK-21",
+      "section": "MEK",
+      "text": "Precis som vanligt te är örtte en så kallad _____ , vilket innebär att man låter blad eller andra växtdelar dra i varmt vatten för att få ut smakämnena.",
+      "options": [
+        "inkarnation",
+        "infusion",
+        "induktion",
+        "inversion"
+      ],
+      "correct": 1,
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-22",
+      "section": "MEK",
+      "text": "Första gången landsnamnet Sverige förekommer i _____ , stavat Swerighe, är i en _____ från Kalmar, daterad 1384.",
+      "options": [
+        "original – bikt",
+        "klartext – kopia",
+        "skrift – urkund",
+        "citat – post"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-23",
+      "section": "MEK",
+      "text": "Sven Lindqvist bygger ett författarskap där varje ny bok tycks ta vid där den _____ slutade. Så upplever sig läsaren vara inbjuden till en resa, vars _____ tills vidare är oviss men med tiden kommer att framstå som självklar mot bakgrund av hur resan startade. Då uppstår den känsla av _____ som kanske utgör den verkliga nerven i Lindqvists författarskap, när man tar del av det i dess helhet.",
+      "options": [
+        "andra – färdriktning – framtidstro",
+        "tidigare – utgångspunkt – tvetydighet",
+        "dessförinnan – grundbetydelse – desperation",
+        "föregående – slutdestination – kontinuitet"
+      ],
+      "correct": 3,
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-24",
+      "section": "MEK",
+      "text": "Ett klassiskt debattknep i politiken, som dock är ett brott mot vetenskaplig metod, är att ”_____ ”. Med uttrycket menas att man bara refererar utvalda delar av den samlade forskningen, i form av _____ citat som stöder den egna uppfattningen, medan övrigt förbises.",
+      "options": [
+        "låta udda vara jämnt – obetydliga",
+        "koka soppa på en spik – påhittade",
+        "blanda äpplen och päron – motsägelsefulla",
+        "plocka russinen ur kakan – lösryckta – 8 – – 9 – MEK"
+      ],
+      "correct": 3,
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-25",
+      "section": "MEK",
+      "text": "Namnförkortningar på företag, organisationer och _____ som uttalas som ord skrivs med versal begynnelsebokstav: Ikea, Jas, Nato, Sida.",
+      "options": [
+        "egenheter",
+        "koncept",
+        "dylikt",
+        "dito"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-26",
+      "section": "MEK",
+      "text": "I Japan rekryteras ofta ny personal redan när de går i skolan, och de anställda stannar i regel i samma företag till pensionen. I tyst _____ mellan anställda och ledning har företagen _____ sig att behålla sin personal även under kärvare tider.",
+      "options": [
+        "förbindelse – ålagt",
+        "medgivande – utfäst",
+        "samförstånd – åtagit",
+        "uppgörelse – utlyst"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-27",
+      "section": "MEK",
+      "text": "Det är _____ att många av pidginspråken har liknande grammatiska konstruktioner, trots att deras vokabulärer kan härröra från helt olika språk. Det finns ingen enig uppfattning om orsakerna till dessa likheter.",
+      "options": [
+        "påfallande",
+        "oberäkneligt",
+        "underförstått",
+        "slumpmässigt"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-28",
+      "section": "MEK",
+      "text": "Den professionella lobbyismens expansion har skapat _____ för en ny typ av politisk _____ med mycket svaga band till vanliga medborgare. När politiskt förtroendekapital förvandlas till en vara på en marknad undergrävs _____ politikerna, partierna och demokratin.",
+      "options": [
+        "en grogrund – elit – tilliten till",
+        "en hållhake – medelklass – föraktet för",
+        "ett andrum – agenda – synen på",
+        "en hävstång – ledning – avståndet till – 10 – MEK"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-29",
+      "section": "MEK",
+      "text": "Markförberedelserna inför omplantering inkluderar traditionellt att marken läggs i _____ eller används för andra _____ i flera år.",
+      "options": [
+        "odling – sysslor",
+        "träda – grödor",
+        "skifte – åkrar",
+        "drift – bruk"
+      ],
+      "correct": 1,
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass2-MEK-30",
+      "section": "MEK",
+      "text": "Majoriteten av de nyinsjuknade psykospatienterna förbättras, men vissa får kvarstående restsymtom och sänkt funktionsnivå. För andra får sjukdomen ett episodiskt förlopp med restsymtom mellan _____ .",
+      "options": [
+        "skoven",
+        "avbrotten",
+        "ingreppen",
+        "tillstånden"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-2",
+      "section": "ORD",
+      "text": "diffus",
+      "options": [
+        "underlig",
+        "avskild",
+        "oklar",
+        "tudelad",
+        "skiftande"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-1",
+      "section": "ORD",
+      "text": "kontentan",
+      "options": [
+        "slutfasen",
+        "höjdpunkten",
+        "första intrycket",
+        "motsvarigheten",
+        "huvudinnehållet"
+      ],
+      "correct": 4,
+      "explanation": "Rätt svar enligt facit: E.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-4",
+      "section": "ORD",
+      "text": "välvillig",
+      "options": [
+        "fast besluten",
+        "pålitlig",
+        "optimistisk",
+        "följsam",
+        "sympatiskt inställd"
+      ],
+      "correct": 4,
+      "explanation": "Rätt svar enligt facit: E.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-3",
+      "section": "ORD",
+      "text": "upprätthålla",
+      "options": [
+        "ge styrka åt",
+        "ta upp någons tid",
+        "ligga till grund för",
+        "bevara på en viss nivå",
+        "visa upp en snygg fasad"
+      ],
+      "correct": 3,
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-6",
+      "section": "ORD",
+      "text": "för egen maskin",
+      "options": [
+        "med kraft",
+        "frivilligt",
+        "utan hjälp",
+        "själviskt",
+        "på rutin"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-5",
+      "section": "ORD",
+      "text": "unikum",
+      "options": [
+        "något som är evigt",
+        "något som är ensamt i sitt slag",
+        "något som är dyrbart",
+        "något som är i ständig förändring",
+        "något som är väl känt"
+      ],
+      "correct": 1,
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-8",
+      "section": "ORD",
+      "text": "kröna",
+      "options": [
+        "besegra",
+        "omforma",
+        "inhägna",
+        "fullända",
+        "överskrida"
+      ],
+      "correct": 3,
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-7",
+      "section": "ORD",
+      "text": "utsikter",
+      "options": [
+        "möjligheter",
+        "upplevelser",
+        "önskemål",
+        "föreställningar",
+        "synpunkter"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-9",
+      "section": "ORD",
+      "text": "banal",
+      "options": [
+        "nördig",
+        "typisk",
+        "alldaglig",
+        "obildad",
+        "klumpig"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-ORD-10",
+      "section": "ORD",
+      "text": "hjärtefråga",
+      "options": [
+        "känslig fråga",
+        "angelägen fråga",
+        "evig fråga",
+        "närgången fråga",
+        "spontan fråga"
+      ],
+      "correct": 1,
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-21",
+      "section": "MEK",
+      "text": "De ekorrar som vi har i Sverige lever inte i flock utan är i det närmaste _____ , det vill säga ensamlevande.",
+      "options": [
+        "solitära",
+        "separata",
+        "isolerade",
+        "individuella"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-22",
+      "section": "MEK",
+      "text": "En betydelsefull _____ av svälten, fattigdomen och eländet i Sverige på 1860-talet var den mycket _____ emigrationen till framför allt Nordamerika.",
+      "options": [
+        "biverkan – övergripande",
+        "konsekvens – omfattande",
+        "slutsats – förekommande",
+        "insikt – utmanande"
+      ],
+      "correct": 1,
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-23",
+      "section": "MEK",
+      "text": "Reklamen för en av de mest använda dejtingapparna lyder: ”Swipe life!” Den är _____ , för den _____ heta drömmar på något så _____ som ett svep med fingret. Livet, en kraft man bara stundtals känner sig nära, är bara ett svep bort.",
+      "options": [
+        "beklaglig – inspirerar – snitsigt",
+        "missvisande – baserar – sansat",
+        "förförisk – projicerar – simpelt",
+        "tänkvärd – attraherar – självklart"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-24",
+      "section": "MEK",
+      "text": "Ökande bostadspriser _____ i allmänhet de rikaste, eftersom fastighetstillgångar och vinsten från försäljning av dessa är _____ till de övre skikten av inkomstfördelningen.",
+      "options": [
+        "gynnar – koncentrerade",
+        "drabbar – fördelade",
+        "främjar – privilegierade",
+        "hämmar – begränsade – 8 – – 9 – MEK"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-25",
+      "section": "MEK",
+      "text": "En vanlig förklaring till morgontrötthet är att vissa personers inre klocka har en _____ som är längre än 24 timmar och därför tenderar att förskjuta dygnsrytmen.",
+      "options": [
+        "kapacitet",
+        "cirkulation",
+        "periodicitet",
+        "disposition"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-26",
+      "section": "MEK",
+      "text": "Under flytten är det viktigt för fåglar att hela tiden ha med sig rätt mängd flygbränsle i form av fett. För mycket fett _____ färden och ökar risken att bli uppäten av rovfåglar. För lite kan leda till svältdöden om födan är _____ .",
+      "options": [
+        "dröjer – klen",
+        "sackar – vag",
+        "dämpar – låg",
+        "sinkar – knapp"
+      ],
+      "correct": 3,
+      "explanation": "Rätt svar enligt facit: D.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-27",
+      "section": "MEK",
+      "text": "Även om komedins ursprung är _____ anser de flesta forskare i dag att den föddes ur karnevalsliknande fester i samband med Dionysosfestivalerna på 400-talet f.Kr.",
+      "options": [
+        "omstritt",
+        "omvittnat",
+        "outgrundligt",
+        "otvivelaktigt"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-28",
+      "section": "MEK",
+      "text": "Brott mot ordningslagen kan straffas med böter eller fängelse i högst sex månader. Den som _____ eller _____ bryter mot förbud mot förtäring eller förvaring av alkoholdrycker döms till penningböter, om inte gärningen är _____ med straff i någon annan författning.",
+      "options": [
+        "uppsåtligen – av oaktsamhet – belagd",
+        "tillfälligt – upprepat – relaterad",
+        "direkt – indirekt – försedd",
+        "uttryckligen – underförstått – förenlig – 10 – MEK"
+      ],
+      "correct": 0,
+      "explanation": "Rätt svar enligt facit: A.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-29",
+      "section": "MEK",
+      "text": "Jag kunde inte se på henne när jag pratade om detta, men jag visste att hon satt och tittade intensivt på mig för att liksom _____ om det var allvar, om jag verkligen menade och stod för vad jag sa.",
+      "options": [
+        "uppdaga",
+        "betrakta",
+        "utröna",
+        "intyga"
+      ],
+      "correct": 2,
+      "explanation": "Rätt svar enligt facit: C.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "2026-04-18-pass4-MEK-30",
+      "section": "MEK",
+      "text": "För att mildra krisen ville facket och arbetsgivarorganisationen tillsammans genomföra ett omfattande kompetensutvecklingsprogram för de anställda. Men satsningen _____ när regeringen i sin vårbudget inte _____ mer pengar till den fond som skulle finansiera projektet.",
+      "options": [
+        "föll till föga – värvade",
+        "stötte på patrull – anslog",
+        "gick omlott – äskade",
+        "fick vind i seglen – tillsatte"
+      ],
+      "correct": 1,
+      "explanation": "Rätt svar enligt facit: B.",
+      "source": "2026-04-18"
+    },
+    {
+      "id": "sample-xyz-1",
+      "section": "XYZ",
+      "source": "sample",
       "text": "Om 3x + 7 = 22, vad är x?",
-      "options": ["3", "5", "7", "15"],
+      "options": [
+        "3",
+        "5",
+        "7",
+        "15"
+      ],
       "correct": 1,
       "explanation": "3x = 22 − 7 = 15, alltså x = 5."
     },
     {
-      "id": "xyz-2", "section": "XYZ", "source": "sample",
+      "id": "sample-xyz-2",
+      "section": "XYZ",
+      "source": "sample",
       "text": "Ett pris höjs med 20 % och sänks sedan med 20 %. Hur förhåller sig det nya priset till det ursprungliga?",
-      "options": ["Det är lika stort", "Det är 4 % lägre", "Det är 4 % högre", "Det är 2 % lägre"],
+      "options": [
+        "Det är lika stort",
+        "Det är 4 % lägre",
+        "Det är 4 % högre",
+        "Det är 2 % lägre"
+      ],
       "correct": 1,
       "explanation": "1,20 × 0,80 = 0,96 — priset blir 96 % av det ursprungliga, alltså 4 % lägre."
     },
     {
-      "id": "xyz-3", "section": "XYZ", "source": "sample",
+      "id": "sample-xyz-3",
+      "section": "XYZ",
+      "source": "sample",
       "text": "Medelvärdet av fem tal är 12. Fyra av talen är 10, 11, 13 och 14. Vilket är det femte talet?",
-      "options": ["10", "11", "12", "13"],
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
       "correct": 2,
       "explanation": "Summan är 5 × 12 = 60. De fyra talen ger 48, så det femte är 60 − 48 = 12."
     },
     {
-      "id": "xyz-4", "section": "XYZ", "source": "sample",
+      "id": "sample-xyz-4",
+      "section": "XYZ",
+      "source": "sample",
       "text": "Hur många procent är 45 av 180?",
-      "options": ["20 %", "25 %", "30 %", "40 %"],
+      "options": [
+        "20 %",
+        "25 %",
+        "30 %",
+        "40 %"
+      ],
       "correct": 1,
       "explanation": "45/180 = 0,25 = 25 %."
     },
     {
-      "id": "xyz-5", "section": "XYZ", "source": "sample",
+      "id": "sample-xyz-5",
+      "section": "XYZ",
+      "source": "sample",
       "text": "En rektangel har omkretsen 28 cm. Längden är 2 cm större än bredden. Vad är arean?",
-      "options": ["40 cm²", "45 cm²", "48 cm²", "49 cm²"],
+      "options": [
+        "40 cm²",
+        "45 cm²",
+        "48 cm²",
+        "49 cm²"
+      ],
       "correct": 2,
       "explanation": "l + b = 14 och l = b + 2 ger b = 6 och l = 8. Arean är 8 × 6 = 48 cm²."
     },
     {
-      "id": "kva-1", "section": "KVA", "source": "sample",
+      "id": "sample-kva-1",
+      "section": "KVA",
+      "source": "sample",
       "text": "Kvantitet I: 2⁵\nKvantitet II: 5²",
       "options": [
         "I är större än II",
@@ -167,7 +715,9 @@
       "explanation": "2⁵ = 32 och 5² = 25, så kvantitet I är större."
     },
     {
-      "id": "kva-2", "section": "KVA", "source": "sample",
+      "id": "sample-kva-2",
+      "section": "KVA",
+      "source": "sample",
       "text": "x är ett positivt heltal.\n\nKvantitet I: 3x\nKvantitet II: x³",
       "options": [
         "I är större än II",
@@ -179,7 +729,9 @@
       "explanation": "För x = 1: 3 > 1. För x = 3: 9 < 27. Förhållandet varierar — informationen är otillräcklig."
     },
     {
-      "id": "kva-3", "section": "KVA", "source": "sample",
+      "id": "sample-kva-3",
+      "section": "KVA",
+      "source": "sample",
       "text": "Kvantitet I: 25 % av 80\nKvantitet II: 80 % av 25",
       "options": [
         "I är större än II",
@@ -191,7 +743,9 @@
       "explanation": "0,25 × 80 = 20 och 0,80 × 25 = 20. Lika stora — procent är kommutativt."
     },
     {
-      "id": "nog-1", "section": "NOG", "source": "sample",
+      "id": "sample-nog-1",
+      "section": "NOG",
+      "source": "sample",
       "text": "Hur gammal är Maria?\n\n(1) Maria är dubbelt så gammal som sin bror.\n(2) Marias bror är 12 år.",
       "options": [
         "(1) ensam är tillräcklig, men inte (2) ensam",
@@ -204,7 +758,9 @@
       "explanation": "Ingen uppgift räcker ensam, men tillsammans: 2 × 12 = 24 år."
     },
     {
-      "id": "nog-2", "section": "NOG", "source": "sample",
+      "id": "sample-nog-2",
+      "section": "NOG",
+      "source": "sample",
       "text": "Vad kostar en biobiljett? (Alla biljetter kostar lika mycket.)\n\n(1) Tre biljetter kostar 360 kr.\n(2) Fyra biljetter kostar 240 kr mer än två biljetter.",
       "options": [
         "(1) ensam är tillräcklig, men inte (2) ensam",
@@ -217,16 +773,30 @@
       "explanation": "(1): 360/3 = 120 kr — räcker ensam. (2): skillnaden 240 kr motsvarar två biljetter, alltså 120 kr styck — räcker också ensam. Båda är var för sig tillräckliga."
     },
     {
-      "id": "dtk-1", "section": "DTK", "source": "sample",
+      "id": "sample-dtk-1",
+      "section": "DTK",
+      "source": "sample",
       "text": "Tabell: Antal sålda cyklar per kvartal\n\nQ1: 120 | Q2: 180 | Q3: 240 | Q4: 60\n\nHur stor andel av årets försäljning skedde under Q3?",
-      "options": ["25 %", "30 %", "40 %", "45 %"],
+      "options": [
+        "25 %",
+        "30 %",
+        "40 %",
+        "45 %"
+      ],
       "correct": 2,
       "explanation": "Totalt: 120+180+240+60 = 600. Q3: 240/600 = 40 %."
     },
     {
-      "id": "dtk-2", "section": "DTK", "source": "sample",
+      "id": "sample-dtk-2",
+      "section": "DTK",
+      "source": "sample",
       "text": "Tabell: Antal sålda cyklar per kvartal\n\nQ1: 120 | Q2: 180 | Q3: 240 | Q4: 60\n\nHur många procent fler cyklar såldes under Q3 än under Q1?",
-      "options": ["50 %", "75 %", "100 %", "120 %"],
+      "options": [
+        "50 %",
+        "75 %",
+        "100 %",
+        "120 %"
+      ],
       "correct": 2,
       "explanation": "240 jämfört med 120 är en ökning med 120/120 = 100 %."
     }

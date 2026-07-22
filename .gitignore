@@ -6,3 +6,9 @@ out/
 .vercel
 *.tsbuildinfo
 .DS_Store
+
+# Provmaterial (PDF:er) hålls lokalt — stora filer, laddas ner från studera.nu/UHR.
+# De extraherade frågorna ligger i data/questions.json som är committad.
+material/
+__pycache__/
+*.pyc

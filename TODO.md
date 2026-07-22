@@ -6,15 +6,43 @@
 - [x] Testfrågeset per delprov (placeholder)
 - [x] Träningsläge: välj delprov → frågor → rätt/fel-feedback
 - [x] Statistik per delprov (localStorage)
-- [ ] Adam testar lokalt / vi deployar till Vercel
+- [x] Deploy till Vercel (live: hp-guide-xi.vercel.app)
+- [x] Äkta ORD + MEK från prov 2026-04-18 (40 frågor) via scripts/extract_verbal.py
 
 ## Nästa
 
-- [ ] GitHub-repo skapas (Adam) + push
-- [ ] Vercel-deploy kopplad till repot
-- [ ] Ladda ner gamla HP + facit (Adam) → läggs i en mapp → extraktionsskript
-- [ ] Designrunda: skärmdumpar från hpguiden.se/HPappen.se, designfil, animeringar/success states
-- [ ] DTK behöver bildstöd (diagram/kartor) — dataformatet har fält för det men UI:t visar inte bilder ännu
+- [ ] LÄS (svensk läsförståelse): flersidiga texter med avstavning — kräver
+      noggrann parsning + koppling text↔fråga. Eget steg (hellre rätt än trasigt).
+- [ ] Kvant (XYZ/KVA/NOG/DTK): bildmetoden — klipp ut varje fråga som bild ur PDF,
+      svar från facit. DTK KRÄVER bild. Ersätter exempelfrågorna (source: "sample").
+- [ ] Provläge + normering (se visionen nedan)
+- [ ] Designrunda: skärmdumpar från hpguiden.se/HPappen.se, animeringar/success states
+- [ ] Egna ELF-frågor om vi vill träna engelska (låg prio) — äkta ELF finns ej (upphovsrätt)
+
+## Datakälla
+
+- Provmaterial (PDF) laddas ner från studera.nu/UHR, läggs i `material/` (gitignoreras, stort).
+- `scripts/extract_verbal.py` läser proven + facit → `data/questions.json`.
+- Prov just nu: 2026-04-18 (pass 2 + 4 verbala, pass 3 + 5 kvant, facit-26a, normeringstabeller).
+
+## Vision: poäng & provläge (Adams idé 2026-07-22)
+
+Målet: så många funktioner som möjligt för att maximera HP-poängen.
+Allt nedan bygger på riktiga provfrågor + normeringstabeller — grunden görs först.
+
+- **Normering:** provet = 160 frågor (80 verbala + 80 kvantitativa). Råpoäng →
+  normerat resultat 0.00–2.00 via tabell som är UNIK per provomgång (medel = 1.0).
+  Vi laddar ner tabellerna, inte en formel — ratiot varierar mellan prov.
+  Källa: normeringstabeller finns publikt (hpguiden.se, mitthp.se, studera.nu/UHR).
+- **Provläge ("testprov"):** kör ett helt gammalt prov → få ditt normerade
+  resultat för den omgången (verbal 0–2.0, kvant 0–2.0, totalt). Med tidtagning som skarpt prov.
+  OBS normering: normeringstabellen bygger på alla 80 verbala frågor inkl. ELF (20 st).
+  Eftersom ELF saknas kan ett exakt verbalt normerat resultat inte återskapas för denna omgång
+  — kvant kan normeras fullt ut. Ta hänsyn till detta (t.ex. visa "uppskattat" för verbal).
+- **Snitt/analys:** sammanställ dina resultat över tid → snittat normerat resultat,
+  utveckling per delprov, vilka delprov som drar ner mest (störst hävstång att träna).
+- **Modes:** träningsläge (nuvarande), provläge, "svaga delar"-läge (fokusera där man är sämst),
+  ev. tidspress-läge.
 
 ## Senare (efter att grunden bevisat sig)
 

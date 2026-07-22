@@ -127,6 +127,9 @@ export default function PracticePage() {
         </span>
         <span>
           Fråga {index + 1} av {questions.length}
+          {q.source === "sample" && (
+            <span className="sample-flag">Exempel</span>
+          )}
         </span>
       </div>
       <div className="progress-track">

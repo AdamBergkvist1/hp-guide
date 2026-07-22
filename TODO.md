@@ -22,8 +22,14 @@
 - [ ] LÄS debatt-texter (INLÄGG): enstaka ord kan hamna i fel ordning från den
       tvåspaltiga läsordningen. Vanliga texter är rena. Kan finslipas eller tas
       för hand vid behov. Kosmetiska mellanslag ("SO-undervisningen") kan finnas kvar.
-- [ ] Kvant (XYZ/KVA/NOG/DTK): bildmetoden — klipp ut varje fråga som bild ur PDF,
-      svar från facit. DTK KRÄVER bild. Ersätter exempelfrågorna (source: "sample").
+- [x] KaTeX-typsättning i appen (components/MathText.tsx renderar $...$).
+- [x] XYZ April 2026: 11 frågor transkriberade till typsatt matte, verifierade
+      mot facit + lösta. Ligger i data/quant_real.json.
+- [ ] XYZ April 2026 fråga 9: grafer som svarsalternativ (bild) — kräver
+      bildfrågetyp. Nästa lilla steg.
+- [ ] Kvant forts: KVA, NOG (transkribera likt XYZ), DTK (tabell/diagram som bild
+      + grupperade frågor som LÄS). Sen övriga två prov.
+- [ ] Figurfrågor (geometri i XYZ, grafer): bildfrågetyp i appen.
 - [ ] Provläge + normering (se visionen nedan)
 - [ ] Designrunda: skärmdumpar från hpguiden.se/HPappen.se, animeringar/success states
 - [ ] Egna ELF-frågor om vi vill träna engelska (låg prio) — äkta ELF finns ej (upphovsrätt)

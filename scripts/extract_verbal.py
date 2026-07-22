@@ -431,10 +431,11 @@ def main():
             # LÄS (11–20)
             questions.extend(extract_las(pdf, answers, code, passn))
 
-    # Behåll kvant-platshållare tills bildmetoden byggs
-    placeholder = ROOT / "data" / "placeholder_quant.json"
-    if placeholder.exists():
-        questions.extend(json.loads(placeholder.read_text(encoding="utf-8"))["questions"])
+    # Riktiga transkriberade kvantfrågor (XYZ m.fl.) + kvarvarande platshållare
+    for extra in ("quant_real.json", "placeholder_quant.json"):
+        p = ROOT / "data" / extra
+        if p.exists():
+            questions.extend(json.loads(p.read_text(encoding="utf-8"))["questions"])
 
     OUT.write_text(
         json.dumps({"sections": SECTIONS, "questions": questions},

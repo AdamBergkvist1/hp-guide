@@ -7,15 +7,9 @@ import { getQuestionsForSection, getSection, shuffle } from "@/lib/questions";
 import { recordAttempt } from "@/lib/progress";
 import type { Question, SectionId } from "@/lib/types";
 import LasMode from "./LasMode";
+import MathText from "@/components/MathText";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
-
-/** Renderar **fetstil** i frågetext. React escapar allt annat automatiskt. */
-function renderText(text: string) {
-  return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
-    i % 2 === 1 ? <strong key={i}>{part}</strong> : <span key={i}>{part}</span>
-  );
-}
 
 export default function PracticePage() {
   const params = useParams<{ section: string }>();
@@ -155,7 +149,9 @@ export default function PracticePage() {
           ))}
         </div>
       )}
-      <div className="question-text">{renderText(q.text)}</div>
+      <div className="question-text">
+        <MathText>{q.text}</MathText>
+      </div>
 
       <div className="options">
         {q.options.map((opt, i) => {
@@ -173,7 +169,9 @@ export default function PracticePage() {
               disabled={answered}
             >
               <span className="letter">{LETTERS[i]}</span>
-              <span>{opt}</span>
+              <span>
+                <MathText>{opt}</MathText>
+              </span>
             </button>
           );
         })}
@@ -186,7 +184,9 @@ export default function PracticePage() {
               ? "Rätt!"
               : `Fel — rätt svar är ${LETTERS[q.correct]}.`}
           </div>
-          <div>{q.explanation}</div>
+          <div>
+            <MathText>{q.explanation}</MathText>
+          </div>
           <button
             className="btn"
             onClick={() => {

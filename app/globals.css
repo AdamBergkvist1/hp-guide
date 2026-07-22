@@ -404,6 +404,115 @@ h2.category {
   color: var(--text-dim);
   font-size: 13px;
 }
+/* Grupperat LÄS-läge */
+.las-layout {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+.las-passage {
+  flex: 1;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  box-shadow: var(--shadow);
+}
+.las-passage-head {
+  margin-bottom: 14px;
+}
+.las-term {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 3px 8px;
+  margin-bottom: 8px;
+}
+.las-title {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  margin: 6px 0 0;
+}
+.las-passage-body {
+  column-count: 2;
+  column-gap: 28px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  text-align: justify;
+  hyphens: auto;
+}
+.las-passage-body p {
+  margin: 0 0 0.85em;
+  text-indent: 1.4em;
+}
+.las-passage-body p:first-of-type {
+  text-indent: 0;
+}
+
+.las-quiz {
+  width: 340px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+}
+.las-quiz-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.las-count {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+.las-dots {
+  display: flex;
+  gap: 6px;
+}
+.las-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+}
+.las-dots .dot.past {
+  background: var(--accent-soft);
+}
+.las-dots .dot.active {
+  background: var(--accent);
+}
+.las-question {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.45;
+}
+
+/* Mobil: stapla, en textspalt, scrollbar text, ej sticky */
+@media (max-width: 720px) {
+  .las-layout {
+    flex-direction: column;
+  }
+  .las-passage {
+    width: 100%;
+    max-height: 44vh;
+    overflow-y: auto;
+  }
+  .las-passage-body {
+    column-count: 1;
+  }
+  .las-quiz {
+    width: 100%;
+    position: static;
+  }
+}
+
 .danger-link {
   color: var(--red);
   font-size: 13px;

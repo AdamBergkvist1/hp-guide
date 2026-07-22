@@ -14,11 +14,14 @@
 
 ## Nästa
 
+- [x] LÄS grupperat läge (HPappen-likt): text i två spalter (en på mobil) +
+      dess frågor med 1/N-bläddring. Frågorna delar passageId.
 - [ ] LÄS: 5 av 60 frågor kunde inte extraheras (PDF-kolumner scramblades vid
       just de frågorna → medvetet uteslutna hellre än fel text). Kan tas för hand
       senare om vi vill ha exakt 60. Saknas: apr26 p4 q11–12, okt25 p3 q17,19,20.
-- [ ] LÄS-passager har enstaka kosmetiska mellanslag ("vi sar", "gymnasies kolan")
-      från PDF-extraktionen — läsbart men ej perfekt. Kan städas med ordlista senare.
+- [ ] LÄS debatt-texter (INLÄGG): enstaka ord kan hamna i fel ordning från den
+      tvåspaltiga läsordningen. Vanliga texter är rena. Kan finslipas eller tas
+      för hand vid behov. Kosmetiska mellanslag ("SO-undervisningen") kan finnas kvar.
 - [ ] Kvant (XYZ/KVA/NOG/DTK): bildmetoden — klipp ut varje fråga som bild ur PDF,
       svar från facit. DTK KRÄVER bild. Ersätter exempelfrågorna (source: "sample").
 - [ ] Provläge + normering (se visionen nedan)

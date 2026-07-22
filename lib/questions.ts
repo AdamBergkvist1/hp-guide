@@ -36,6 +36,39 @@ export function getSectionMeta(id: SectionId): SectionMeta {
   return { count: qs.length, realCount, status };
 }
 
+export interface LasPassage {
+  passageId: string;
+  title: string;
+  term: string;
+  passage: string;
+  questions: Question[];
+}
+
+/** LÄS-frågor grupperade per text (för det grupperade LÄS-läget). */
+export function getLasPassages(): LasPassage[] {
+  const byId = new Map<string, LasPassage>();
+  for (const q of getQuestionsForSection("LAS")) {
+    const pid = q.passageId ?? q.id;
+    if (!byId.has(pid)) {
+      byId.set(pid, {
+        passageId: pid,
+        title: q.passageTitle ?? "",
+        term: q.term ?? "",
+        passage: q.passage ?? "",
+        questions: [],
+      });
+    }
+    byId.get(pid)!.questions.push(q);
+  }
+  const qnum = (id: string) => {
+    const m = id.match(/LAS-(\d+)$/);
+    return m ? parseInt(m[1], 10) : 0;
+  };
+  const passages = [...byId.values()];
+  for (const p of passages) p.questions.sort((a, b) => qnum(a.id) - qnum(b.id));
+  return passages;
+}
+
 /** Fisher–Yates-blandning, muterar inte originalet */
 export function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];

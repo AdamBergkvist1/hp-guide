@@ -22,6 +22,10 @@ export interface Question {
   passage?: string;
   /** Rubrik på LÄS-texten, t.ex. "Fiskodling vid vattenkraftverk" */
   passageTitle?: string;
+  /** Grupperings-id: frågor med samma passageId hör till samma text */
+  passageId?: string;
+  /** Termetikett, t.ex. "VÅR 2026" */
+  term?: string;
   text: string;
   options: string[];
   /** Index i options */

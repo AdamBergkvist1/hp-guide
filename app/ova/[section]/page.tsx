@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import { getQuestionsForSection, getSection, shuffle } from "@/lib/questions";
 import { recordAttempt } from "@/lib/progress";
 import type { Question, SectionId } from "@/lib/types";
+import LasMode from "./LasMode";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
 
@@ -33,6 +34,11 @@ export default function PracticePage() {
   const [chosen, setChosen] = useState<number | null>(null);
   const [numCorrect, setNumCorrect] = useState(0);
   const [saveFailed, setSaveFailed] = useState(false);
+
+  // Läsförståelse har ett eget, grupperat läge (text + dess frågor).
+  if (sectionId === "LAS") {
+    return <LasMode />;
+  }
 
   if (!section) {
     return (

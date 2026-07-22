@@ -53,6 +53,15 @@ SECTIONS = [
 
 
 # ---------------------------------------------------------------- text-städning
+def term_label(code: str) -> str:
+    """'2026-04-18' -> 'VÅR 2026', '2025-10-19' -> 'HÖST 2025'."""
+    m = re.match(r"(\d{4})-(\d{2})", code)
+    if not m:
+        return code
+    year, month = m.group(1), int(m.group(2))
+    return f"{'VÅR' if month <= 6 else 'HÖST'} {year}"
+
+
 def clean(s: str) -> str:
     s = s.replace("\xad", "")
     s = re.sub(r"-\n(?=[a-zåäö])", "", s)
@@ -257,25 +266,45 @@ def has_questions(lines):
     return any(_Q_LINE.match(l["text"]) for l in lines)
 
 
+def _column_bases(xs):
+    """Hittar spalternas vänstermarginaler (t.ex. 64 och 325) ur radernas x0.
+    En marginal är ett x-värde utan något mindre x0 inom 40 px (= spaltens kant)."""
+    bases = []
+    for x in sorted(set(round(v) for v in xs)):
+        if not any(0 < x - b <= 40 for b in bases):
+            bases.append(x)
+    return bases
+
+
 def build_passage(lines):
-    """Bygger ren passagetext ur rader: separerar rubrik (stor font), återskapar
-    stycken (indrag) och lagar avstavning (bindestreck/mjukt bindestreck)."""
+    """Bygger ren passagetext ur rader: rubrik (stor font, ev. flera rader),
+    stycken via indrag räknat PER SPALT, och lagad avstavning."""
     lines = [l for l in lines
              if not re.match(r"^\s*(LÄS|Uppgifter|Svensk läsförståelse)\s*$",
                              l["text"].strip())]
     if not lines:
         return "", ""
-    title = ""
-    if lines[0]["size"] >= 14:
-        title = re.sub(r"\s+", " ", lines[0]["text"]).strip()
+    # Rubrik = inledande rader med stor font (kan vara flera rader)
+    title_parts = []
+    while lines and lines[0]["size"] >= 14:
+        title_parts.append(lines[0]["text"])
         lines = lines[1:]
-    margin = min((l["x0"] for l in lines), default=0)
+    title = re.sub(r"\s+", " ", " ".join(title_parts)).strip()
+    if not lines:
+        return title, ""
+
+    bases = _column_bases([l["x0"] for l in lines])
+
+    def is_indent(x):
+        base = max([b for b in bases if b <= x + 1], default=round(x))
+        return x - base > 5
+
     paras, cur = [], ""
     for l in lines:
         t = re.sub(r"–\s*(MB|\d{1,3})\s*–", " ", l["text"]).strip()
         if not t:
             continue
-        if l["x0"] - margin > 5 and cur:      # indrag = nytt stycke
+        if is_indent(l["x0"]) and cur:        # indrag mot spaltens kant = nytt stycke
             paras.append(cur); cur = ""
         if cur.endswith("\xad"):
             cur = cur[:-1] + t
@@ -296,6 +325,7 @@ def extract_las(pdf_path: Path, answers, exam_code, passn):
     reader = PdfReader(str(pdf_path))
     out = []
     buf = []          # passagerader (med metadata) i väntan på sitt frågeblock
+    block = 0         # räknare för att gruppera frågor per text (passageId)
     for i, page in enumerate(plumb.pages):
         if i == 0:
             continue
@@ -314,6 +344,8 @@ def extract_las(pdf_path: Path, answers, exam_code, passn):
                    len(combined))
         buf += combined[:cut]
         title, passage = build_passage(buf)
+        block += 1
+        passage_id = f"{exam_code}-p{passn}-b{block}"
         for q in qs:
             letter = answers.get(q["n"])
             if letter is None or letter not in LETTER:
@@ -329,8 +361,10 @@ def extract_las(pdf_path: Path, answers, exam_code, passn):
             out.append({
                 "id": f"{exam_code}-p{passn}-LAS-{q['n']}",
                 "section": "LAS",
+                "passageId": passage_id,
                 "passageTitle": title,
                 "passage": passage,
+                "term": term_label(exam_code),
                 "text": q["text"],
                 "options": q["options"],
                 "correct": correct,

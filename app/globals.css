@@ -33,9 +33,16 @@ a {
 }
 
 .container {
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px 64px;
+}
+
+/* Frågevyn (och andra läs-tunga vyer) håller en smalare, läsvänlig bredd
+   även på breda skärmar. Startsidan/statistiken får använda hela bredden. */
+.reading {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -45,7 +52,7 @@ a {
   margin-bottom: 32px;
 }
 .site-header-inner {
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 14px 20px;
   display: flex;

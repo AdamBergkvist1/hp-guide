@@ -61,6 +61,7 @@ export default function PracticePage() {
   if (index >= questions.length) {
     const pct = Math.round((100 * numCorrect) / questions.length);
     return (
+      <div className="reading">
       <div className="result-card">
         <div className="card-id" style={{ display: "inline-block" }}>
           {section.id}
@@ -97,6 +98,7 @@ export default function PracticePage() {
           <button className="btn secondary">Se statistik</button>
         </Link>
       </div>
+      </div>
     );
   }
 
@@ -118,7 +120,7 @@ export default function PracticePage() {
   }
 
   return (
-    <>
+    <div className="reading">
       <div className="quiz-progress">
         <span>
           <strong>{section.id}</strong> — {section.name}
@@ -178,6 +180,6 @@ export default function PracticePage() {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }

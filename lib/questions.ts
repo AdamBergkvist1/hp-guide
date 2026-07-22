@@ -36,6 +36,16 @@ export function getSectionMeta(id: SectionId): SectionMeta {
   return { count: qs.length, realCount, status };
 }
 
+/** "2026-04-18" -> "VÅR 2026", "2025-10-19" -> "HÖST 2025". null för exempelfrågor. */
+export function termLabel(source?: string): string | null {
+  if (!source) return null;
+  const m = source.match(/^(\d{4})-(\d{2})/);
+  if (!m) return null;
+  const year = m[1];
+  const month = parseInt(m[2], 10);
+  return `${month <= 6 ? "VÅR" : "HÖST"} ${year}`;
+}
+
 export interface LasPassage {
   passageId: string;
   title: string;

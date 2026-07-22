@@ -59,6 +59,12 @@ Allt nedan bygger på riktiga provfrågor + normeringstabeller — grunden görs
 - **Modes:** träningsläge (nuvarande), provläge, "svaga delar"-läge (fokusera där man är sämst),
   ev. tidspress-läge.
 
+## Idéer (Adam)
+
+- [x] Visa vilket prov varje fråga är från (termetikett VÅR/HÖST på alla frågor).
+- [ ] Formel-/pluggflik: samla formler och saker man behöver kunna utantill för
+      matten (à la HPappens "Formelsamling" / "Kurs"). Egen sida i appen.
+
 ## Senare (efter att grunden bevisat sig)
 
 - [ ] Konton + sparad progress i molnet: Clerk (auth) + Supabase (data, MED row level security från dag ett)

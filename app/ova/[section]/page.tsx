@@ -3,7 +3,12 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useMemo, useState } from "react";
-import { getQuestionsForSection, getSection, shuffle } from "@/lib/questions";
+import {
+  getQuestionsForSection,
+  getSection,
+  shuffle,
+  termLabel,
+} from "@/lib/questions";
 import { recordAttempt } from "@/lib/progress";
 import type { Question, SectionId } from "@/lib/types";
 import LasMode from "./LasMode";
@@ -124,12 +129,15 @@ export default function PracticePage() {
       <div className="quiz-progress">
         <span>
           <strong>{section.id}</strong> — {section.name}
-        </span>
-        <span>
-          Fråga {index + 1} av {questions.length}
+          {termLabel(q.source) && (
+            <span className="term-tag">{termLabel(q.source)}</span>
+          )}
           {q.source === "sample" && (
             <span className="sample-flag">Exempel</span>
           )}
+        </span>
+        <span>
+          Fråga {index + 1} av {questions.length}
         </span>
       </div>
       <div className="progress-track">

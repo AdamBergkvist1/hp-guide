@@ -1,0 +1,108 @@
+{
+  "questions": [
+    {
+      "id": "2026-04-18-p3-DTK-29", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat1", "passageTitle": "Tidsåtgång för oavlönat hemarbete",
+      "image": "/quant-img/dtk-mat1-2026-04-18.png",
+      "text": "Hur mycket mer tid per vecka lade kvinnor på Diskning, avdukning 1990 jämfört med 2010?",
+      "options": ["45 minuter", "60 minuter", "90 minuter", "105 minuter"],
+      "correct": 1,
+      "explanation": "Kvinnor lade ca 9 minuter mer per dag på diskning/avdukning 1990 än 2010. $9\\times7\\approx60$ minuter per vecka."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-30", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat1", "passageTitle": "Tidsåtgång för oavlönat hemarbete",
+      "image": "/quant-img/dtk-mat1-2026-04-18.png",
+      "text": "Vilket av svarsförslagen motsvarar 3 timmar och 30 minuter i veckan?",
+      "options": [
+        "Den tid kvinnor lade på Underhållsarbete år 1990",
+        "Den tid män lade på Omsorg om egna barn år 1990",
+        "Den tid kvinnor lade på Inköp av varor och tjänster år 2000",
+        "Den tid män lade på Resor i samband med hemarbete år 2000"
+      ],
+      "correct": 2,
+      "explanation": "3 h 30 min per vecka $=210$ min $/7=30$ minuter per dag. Det motsvarar den tid kvinnor lade på Inköp av varor och tjänster år 2000 (ca 30 min/dag)."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-31", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat1", "passageTitle": "Tidsåtgång för oavlönat hemarbete",
+      "image": "/quant-img/dtk-mat1-2026-04-18.png",
+      "text": "Jämför den tid kvinnor lade på respektive hemarbetsaktivitet de olika åren. För vilken aktivitet hade tiden minskat mest 2010 jämfört med 1990, procentuellt sett?",
+      "options": ["Matlagning", "Städning av bostaden", "Tvätt, strykning", "Omsorg om egna barn"],
+      "correct": 2,
+      "explanation": "Tvätt och strykning för kvinnor minskade från ca 22 min/dag (1990) till ca 13 min/dag (2010) — den procentuellt största minskningen av alternativen."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-32", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat2", "passageTitle": "Vård vid svenska sjukhus",
+      "image": "/quant-img/dtk-mat2-2026-04-18.png",
+      "text": "Hur lång var medelvårdtiden vid S:t Eriks sjukhus jämfört med medelvårdtiden vid Skånes universitetssjukhus?",
+      "options": ["En tredjedel så lång", "Hälften så lång", "Dubbelt så lång", "Tre gånger så lång"],
+      "correct": 0,
+      "explanation": "S:t Eriks sjukhus: 2,17 dagar. Skånes universitetssjukhus: 6,71 dagar. $2{,}17/6{,}71\\approx\\tfrac13$ — en tredjedel så lång."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-33", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat2", "passageTitle": "Vård vid svenska sjukhus",
+      "image": "/quant-img/dtk-mat2-2026-04-18.png",
+      "text": "Identifiera det sjukhus där patienterna hade den högsta medelåldern och det sjukhus där de hade den lägsta medelåldern. Hur stor var skillnaden i medelålder mellan dessa två sjukhus?",
+      "options": ["37 år", "40 år", "43 år", "45 år"],
+      "correct": 2,
+      "explanation": "Högsta medelålder: Sala lasarett 80 år. Lägsta: Sophiahemmet 37 år. Skillnaden är $80-37=43$ år."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-34", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat2", "passageTitle": "Vård vid svenska sjukhus",
+      "image": "/quant-img/dtk-mat2-2026-04-18.png",
+      "text": "Hur många var vårddagarna sammanlagt vid Kiruna sjukhus?",
+      "options": ["7 200", "8 500", "9 900", "10 500"],
+      "correct": 2,
+      "explanation": "Vårddagar $=$ antal vårdtillfällen $\\times$ medelvårdtid $=1725\\times5{,}72\\approx9900$."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-35", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat3", "passageTitle": "Vattenförsörjning i sydöstra Skåne",
+      "image": "/quant-img/dtk-mat3-2026-04-18.png",
+      "text": "Vilka väderstreck beskriver bäst riktningen mellan de två undersökta, ej utbyggda uttagsplatserna vid Kåseberga och Ö. Vemmerlöv?",
+      "options": ["NNO – SSV", "NNO – VSV", "ONO – SSV", "ONO – VSV"],
+      "correct": 0,
+      "explanation": "På kartan ligger Ö. Vemmerlöv nordnordost (NNO) om Kåseberga; riktningen mellan platserna är alltså NNO–SSV."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-36", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat3", "passageTitle": "Vattenförsörjning i sydöstra Skåne",
+      "image": "/quant-img/dtk-mat3-2026-04-18.png",
+      "text": "Hur lång är den tilltänkta huvudvattenledningen från Hörupsåsen som startar vid det befintliga vattenverket i Löderup, går vidare till det befintliga vattenverket i Borrby, och sedan fortsätter via Skillinge till Ingelstorp?",
+      "options": ["22 km", "33 km", "44 km", "55 km"],
+      "correct": 1,
+      "explanation": "Mät sträckan Löderup → Borrby → Skillinge → Ingelstorp med kartans skala (0–10 km). Den tilltänkta ledningen är sammanlagt ca 33 km."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-37", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat3", "passageTitle": "Vattenförsörjning i sydöstra Skåne",
+      "image": "/quant-img/dtk-mat3-2026-04-18.png",
+      "text": "De befintliga vattenverken vid Nybro, Borrby och Bollerup utgör hörnen i ett triangelformat område. Hur stor area har detta område?",
+      "options": ["20 km²", "40 km²", "60 km²", "80 km²"],
+      "correct": 1,
+      "explanation": "Uppskatta triangelns bas och höjd med kartans skala. Arean blir ca 40 km²."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-39", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat4", "passageTitle": "Medlemmar i Svenska kyrkan",
+      "image": "/quant-img/dtk-mat4-2026-04-18.png",
+      "text": "I vilken av följande åldrar var antalet individer 110 000–120 000 och antalet medlemmar i Svenska kyrkan större än 80 000?",
+      "options": ["9 år", "24 år", "42 år", "69 år"],
+      "correct": 3,
+      "explanation": "Vid 69 år ligger befolkningen (ljus yta) på ca 110 000–120 000 och antalet medlemmar (mörk yta) över 80 000. Det stämmer bara för 69 år."
+    },
+    {
+      "id": "2026-04-18-p3-DTK-40", "section": "DTK", "source": "2026-04-18",
+      "passageId": "2026-04-18-dtk-mat4", "passageTitle": "Medlemmar i Svenska kyrkan",
+      "image": "/quant-img/dtk-mat4-2026-04-18.png",
+      "text": "Jämför 39-åringar med 18-åringar med avseende på antalet individer som inte var medlemmar i Svenska kyrkan. Hur stor var skillnaden?",
+      "options": ["5 000", "15 000", "25 000", "35 000"],
+      "correct": 1,
+      "explanation": "Antalet icke-medlemmar är avståndet mellan befolkningsytan och medlemsytan. Skillnaden mellan 39-åringar och 18-åringar är ca 15 000."
+    }
+  ]
+}

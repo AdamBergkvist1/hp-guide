@@ -539,6 +539,60 @@ h2.category {
   line-height: 1.45;
 }
 
+/* DTK: material-bild i vänsterpanelen + lightbox */
+.dtk-image-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  cursor: zoom-in;
+  position: relative;
+  overflow: hidden;
+}
+.dtk-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.dtk-zoom-hint {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(20, 24, 35, 0.7);
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+.dtk-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(20, 24, 35, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: zoom-out;
+}
+.dtk-lightbox img {
+  max-width: 100%;
+  max-height: 92vh;
+  background: #fff;
+  border-radius: 8px;
+}
+.dtk-lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 /* Mobil: stapla, en textspalt, scrollbar text, ej sticky */
 @media (max-width: 720px) {
   .las-layout {

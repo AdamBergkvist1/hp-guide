@@ -79,6 +79,39 @@ export function getLasPassages(): LasPassage[] {
   return passages;
 }
 
+export interface DtkMaterial {
+  materialId: string;
+  title: string;
+  image: string;
+  term: string;
+  questions: Question[];
+}
+
+/** DTK-frågor grupperade per material (tabell/diagram/karta). */
+export function getDtkMaterials(): DtkMaterial[] {
+  const byId = new Map<string, DtkMaterial>();
+  for (const q of getQuestionsForSection("DTK")) {
+    const mid = q.passageId ?? q.id;
+    if (!byId.has(mid)) {
+      byId.set(mid, {
+        materialId: mid,
+        title: q.passageTitle ?? "",
+        image: q.image ?? "",
+        term: termLabel(q.source) ?? "",
+        questions: [],
+      });
+    }
+    byId.get(mid)!.questions.push(q);
+  }
+  const qnum = (id: string) => {
+    const m = id.match(/DTK-(\d+)$/);
+    return m ? parseInt(m[1], 10) : 0;
+  };
+  const mats = [...byId.values()];
+  for (const m of mats) m.questions.sort((a, b) => qnum(a.id) - qnum(b.id));
+  return mats;
+}
+
 /** Fisher–Yates-blandning, muterar inte originalet */
 export function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];

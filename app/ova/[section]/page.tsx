@@ -12,6 +12,7 @@ import {
 import { recordAttempt } from "@/lib/progress";
 import type { Question, SectionId } from "@/lib/types";
 import LasMode from "./LasMode";
+import DtkMode from "./DtkMode";
 import MathText from "@/components/MathText";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
@@ -34,9 +35,12 @@ export default function PracticePage() {
   const [numCorrect, setNumCorrect] = useState(0);
   const [saveFailed, setSaveFailed] = useState(false);
 
-  // Läsförståelse har ett eget, grupperat läge (text + dess frågor).
+  // Läsförståelse och DTK har egna, grupperade lägen (material + dess frågor).
   if (sectionId === "LAS") {
     return <LasMode />;
+  }
+  if (sectionId === "DTK") {
+    return <DtkMode />;
   }
 
   if (!section) {

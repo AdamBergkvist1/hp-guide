@@ -31,8 +31,11 @@
       2×2-rutnät. XYZ nu komplett (12 frågor).
 - [x] NOG April 2026: 6 frågor transkriberade, verifierade mot facit + lösta.
       Provets riktiga 5-alternativsformat ("i (1) men ej i (2)" osv).
-- [ ] DTK: tabell/diagram/karta som bild + grupperade frågor (som LÄS). Nästa steg.
-- [ ] Övriga två prov (okt25, apr25): transkribera kvant på samma sätt.
+- [x] DTK April 2026: 11 frågor + 4 material (diagram/tabell/karta) som bild,
+      grupperade som LÄS, med lightbox-zoom. Liggande diagram roterade rätt.
+- [ ] DTK fråga 38: cirkeldiagram som svarsalternativ (optionImages) — litet steg kvar.
+- [ ] April 2026 nu KOMPLETT förutom ELF (finns ej) + DTK 38.
+- [ ] Övriga två prov (okt25, apr25): transkribera kvant på samma sätt (verbalt klart).
 - [ ] Formel-/pluggflik för matten (Adams idé).
 - [ ] Provläge + normering (se visionen nedan)
 - [ ] Designrunda: skärmdumpar från hpguiden.se/HPappen.se, animeringar/success states

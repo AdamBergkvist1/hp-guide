@@ -92,11 +92,11 @@ export default function Home() {
       ))}
 
       <div className="info-note">
-        <strong>Om innehållet:</strong> ORD och MEK innehåller äkta uppgifter från
-        högskoleprovet 2026-04-18. Läsförståelse (LÄS) och de kvantitativa
-        delproven byggs ut härnäst — kvant visar exempelfrågor så länge. Engelsk
-        läsförståelse (ELF) finns inte med, eftersom de engelska texterna är
-        upphovsrättsskyddade och klipps bort ur de publicerade proven.
+        <strong>Om innehållet:</strong> ORD, LÄS och MEK innehåller äkta uppgifter
+        från tre högskoleprov (april 2025, oktober 2025 och april 2026). De
+        kvantitativa delproven visar exempelfrågor så länge — de byggs ut härnäst.
+        Engelsk läsförståelse (ELF) finns inte med, eftersom de engelska texterna
+        är upphovsrättsskyddade och klipps bort ur de publicerade proven.
       </div>
     </>
   );

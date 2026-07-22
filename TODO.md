@@ -7,12 +7,18 @@
 - [x] Träningsläge: välj delprov → frågor → rätt/fel-feedback
 - [x] Statistik per delprov (localStorage)
 - [x] Deploy till Vercel (live: hp-guide-xi.vercel.app)
-- [x] Äkta ORD + MEK från prov 2026-04-18 (40 frågor) via scripts/extract_verbal.py
+- [x] Äkta ORD + MEK + LÄS via scripts/extract_verbal.py
+- [x] Multi-prov: skriptet läser alla undermappar i material/, auto-detekterar
+      verbala pass ur facit. Nu 3 prov: apr 2025, okt 2025, apr 2026.
+- [x] Äkta frågor: ORD 60, MEK 60, LÄS 55 (175 totalt), 0 fel mot facit.
 
 ## Nästa
 
-- [ ] LÄS (svensk läsförståelse): flersidiga texter med avstavning — kräver
-      noggrann parsning + koppling text↔fråga. Eget steg (hellre rätt än trasigt).
+- [ ] LÄS: 5 av 60 frågor kunde inte extraheras (PDF-kolumner scramblades vid
+      just de frågorna → medvetet uteslutna hellre än fel text). Kan tas för hand
+      senare om vi vill ha exakt 60. Saknas: apr26 p4 q11–12, okt25 p3 q17,19,20.
+- [ ] LÄS-passager har enstaka kosmetiska mellanslag ("vi sar", "gymnasies kolan")
+      från PDF-extraktionen — läsbart men ej perfekt. Kan städas med ordlista senare.
 - [ ] Kvant (XYZ/KVA/NOG/DTK): bildmetoden — klipp ut varje fråga som bild ur PDF,
       svar från facit. DTK KRÄVER bild. Ersätter exempelfrågorna (source: "sample").
 - [ ] Provläge + normering (se visionen nedan)

@@ -18,8 +18,10 @@ export interface Section {
 export interface Question {
   id: string;
   section: SectionId;
-  /** Längre textstycke (LÄS/ELF) som frågan hör till */
+  /** Längre textstycke (LÄS/ELF) som frågan hör till. Stycken separeras med "\n\n". */
   passage?: string;
+  /** Rubrik på LÄS-texten, t.ex. "Fiskodling vid vattenkraftverk" */
+  passageTitle?: string;
   text: string;
   options: string[];
   /** Index i options */

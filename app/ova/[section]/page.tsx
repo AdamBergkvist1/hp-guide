@@ -139,7 +139,16 @@ export default function PracticePage() {
         />
       </div>
 
-      {q.passage && <div className="passage">{q.passage}</div>}
+      {q.passage && (
+        <div className="passage">
+          {q.passageTitle && (
+            <div className="passage-title">{q.passageTitle}</div>
+          )}
+          {q.passage.split("\n\n").map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
+      )}
       <div className="question-text">{renderText(q.text)}</div>
 
       <div className="options">

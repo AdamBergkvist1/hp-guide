@@ -229,10 +229,28 @@ h2.category {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 16px 18px;
-  font-size: 14.5px;
-  margin-bottom: 18px;
-  white-space: pre-wrap;
+  padding: 18px 22px;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  max-height: 46vh;
+  overflow-y: auto;
+}
+.passage-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.passage p {
+  margin: 0 0 0.9em;
+  text-indent: 1.4em;
+}
+.passage p:first-of-type {
+  text-indent: 0;
+}
+.passage p:last-child {
+  margin-bottom: 0;
 }
 
 .question-text {

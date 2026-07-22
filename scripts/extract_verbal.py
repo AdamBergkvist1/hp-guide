@@ -211,30 +211,109 @@ def column_text(page) -> str:
     return render(left) + "\n" + render(right)
 
 
+def page_lines(page):
+    """Returnerar (vänsterkolumn, högerkolumn) som listor av rader med metadata
+    (text, x0, storlek). Radgruppering på y-position; spaltgräns via största
+    tomrummet i x-led."""
+    words = page.extract_words(extra_attrs=["size"])
+    if not words:
+        return [], []
+    w = page.width
+    centers = sorted((x["x0"] + x["x1"]) / 2 for x in words)
+    boundary, best = w / 2, 0.0
+    for a, b in zip(centers, centers[1:]):
+        mid = (a + b) / 2
+        if 0.30 * w < mid < 0.70 * w and (b - a) > best:
+            best, boundary = b - a, mid
+
+    def lines_of(ws):
+        ws = sorted(ws, key=lambda x: (round(x["top"]), x["x0"]))
+        groups, cur, last = [], [], None
+        for x in ws:
+            if last is not None and abs(x["top"] - last) > 4:
+                groups.append(cur); cur = []
+            cur.append(x); last = x["top"]
+        if cur:
+            groups.append(cur)
+        res = []
+        for g in groups:
+            g = sorted(g, key=lambda z: z["x0"])
+            res.append({
+                "text": " ".join(z["text"] for z in g),
+                "x0": min(z["x0"] for z in g),
+                "size": max(z.get("size", 10) for z in g),
+            })
+        return res
+
+    left = [x for x in words if (x["x0"] + x["x1"]) / 2 < boundary]
+    right = [x for x in words if (x["x0"] + x["x1"]) / 2 >= boundary]
+    return lines_of(left), lines_of(right)
+
+
+_Q_LINE = re.compile(r"^\s*(Uppgifter|1[1-9]\.|20\.|[A-E]\s)")
+
+
+def has_questions(lines):
+    return any(_Q_LINE.match(l["text"]) for l in lines)
+
+
+def build_passage(lines):
+    """Bygger ren passagetext ur rader: separerar rubrik (stor font), återskapar
+    stycken (indrag) och lagar avstavning (bindestreck/mjukt bindestreck)."""
+    lines = [l for l in lines
+             if not re.match(r"^\s*(LÄS|Uppgifter|Svensk läsförståelse)\s*$",
+                             l["text"].strip())]
+    if not lines:
+        return "", ""
+    title = ""
+    if lines[0]["size"] >= 14:
+        title = re.sub(r"\s+", " ", lines[0]["text"]).strip()
+        lines = lines[1:]
+    margin = min((l["x0"] for l in lines), default=0)
+    paras, cur = [], ""
+    for l in lines:
+        t = re.sub(r"–\s*(MB|\d{1,3})\s*–", " ", l["text"]).strip()
+        if not t:
+            continue
+        if l["x0"] - margin > 5 and cur:      # indrag = nytt stycke
+            paras.append(cur); cur = ""
+        if cur.endswith("\xad"):
+            cur = cur[:-1] + t
+        elif cur.rstrip().endswith("-"):
+            cur = cur.rstrip()[:-1] + t
+        else:
+            cur = (cur + " " + t) if cur else t
+    if cur.strip():
+        paras.append(cur)
+    paras = [re.sub(r"\s+", " ", p.replace("\xad", "")).strip() for p in paras]
+    return title, "\n\n".join(p for p in paras if p)
+
+
 def extract_las(pdf_path: Path, answers, exam_code, passn):
-    """LÄS: läser kolumnvis, samlar passagetext tills ett frågeblock dyker upp
-    och kopplar då blockets frågor till den samlade texten."""
+    """LÄS: läser radvis och kolumnvis, samlar passagerader tills ett frågeblock
+    dyker upp och kopplar då blockets frågor till den byggda texten."""
     plumb = pdfplumber.open(str(pdf_path))
     reader = PdfReader(str(pdf_path))
     out = []
-    buffer = ""
+    buf = []          # passagerader (med metadata) i väntan på sitt frågeblock
     for i, page in enumerate(plumb.pages):
         if i == 0:
             continue
         raw = reader.pages[i].extract_text()
         if classify_page(raw) != "LAS":
             continue
-        col = column_text(page)
-        # Har sidan ett frågeblock? (numrerade frågor 11–20)
-        qs = extract_numbered(col, (11, 20))
+        left, right = page_lines(page)
+        combined = left + right                  # läsordning: vänster spalt, sedan höger
+        qs = extract_numbered(column_text(page), (11, 20))
         if not qs:
-            buffer += "\n" + col                 # ren passagesida
+            buf += combined                      # ren passagesida
             continue
-        # Text före första frågan på sidan hör till passagen
-        first_q = re.search(r"(?m)^\s*1[1-9]\.\s|^\s*20\.\s", col)
-        if first_q:
-            buffer += "\n" + col[: first_q.start()]
-        passage = clean_passage(buffer)
+        # Passagen är allt FÖRE frågeblocket ('Uppgifter' / första numret).
+        cut = next((k for k, l in enumerate(combined)
+                    if re.match(r"^\s*(Uppgifter|1[1-9]\.|20\.)", l["text"])),
+                   len(combined))
+        buf += combined[:cut]
+        title, passage = build_passage(buf)
         for q in qs:
             letter = answers.get(q["n"])
             if letter is None or letter not in LETTER:
@@ -250,6 +329,7 @@ def extract_las(pdf_path: Path, answers, exam_code, passn):
             out.append({
                 "id": f"{exam_code}-p{passn}-LAS-{q['n']}",
                 "section": "LAS",
+                "passageTitle": title,
                 "passage": passage,
                 "text": q["text"],
                 "options": q["options"],
@@ -257,7 +337,7 @@ def extract_las(pdf_path: Path, answers, exam_code, passn):
                 "explanation": f"Rätt svar enligt facit: {letter}.",
                 "source": exam_code,
             })
-        buffer = ""
+        buf = []
     return out
 
 
